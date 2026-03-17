@@ -1,75 +1,79 @@
-# Hi 👋, I'm Aditya Malkar
+Aditya Sanjay Malkar
 
-🎓 Master's Student in Data Science | 💻 Passionate about Machine Learning & AI | 🧠 Lifelong Learner  
+MS in Data Science @ Stevens Institute of Technology
+Product Data Analyst | Machine Learning Engineer | AWS Certified AI Practitioner
 
-Welcome to my GitHub! My journey in technology is fueled by curiosity and a relentless drive to make data meaningful. I am particularly passionate about building impactful machine learning models, analyzing data for insights, and contributing to real-world projects.
+Portfolio | LinkedIn | Email
 
----
+🚀 Professional Profile
 
-### 🌱 What I’m Currently Working On:
-- Neural Data Compression for Images and Vidoes.
-- Building Foundation, increasing proficiency in AWS
-  
----
+I am a Data Scientist and Product Analyst with a focus on building autonomous agentic systems and statistical modeling to drive product strategy. Currently, I am specializing in Machine Learning and AI at Stevens Institute of Technology (Expected May 2026), where I maintain a 3.7 GPA.
 
-### 🚀 Technologies & Tools:
-- **Programming:** Python, R, SQL, PySpark  
-- **Libraries & Frameworks:** NumPy, Pandas, TensorFlow, Scikit-learn, MediaPipe, NLTK, Matplotlib, PyTorch, Keras  
-- **Data Tools:** Azure, Google Cloud, AWS, Github  
-- **Other Skills:** Data Preprocessing, Visualization, Model Deployment  
+Core Expertise: Statistical Validation, NLP & Deep Learning, RAG Pipelines, and Product Data Strategy.
 
----
+Current Research: Neural Data Compression for Images and Videos.
 
-### 🤝 How You Can Collaborate with Me:
-- Interested in **AI-powered solutions**, **data science projects**, or **open-source contributions**?  
-  Feel free to reach out—collaboration is key to innovation!  
+🛠️ Technical Stack & Certifications
 
----
+Languages & Foundations
 
-<h3 align="left">🌐 Connect with Me:</h3>
-<p align="left">
-  <a href="https://twitter.com/malkar_aditya" target="_blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
-  </a>
-  <a href="https://www.linkedin.com/in/aditya-malkar-694490253/" target="_blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
-  </a>
-</p>
+Programming: Python, SQL (PostgreSQL, MySQL), R, PySpark.
 
-<h3 align="left">🛠️ Languages and Tools:</h3>
-<p align="left">
-  <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/>
-  </a>
-  <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
-    <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django" width="40" height="40"/>
-  </a>
-  <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" alt="Flask" width="40" height="40"/>
-  </a>
-  <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="40" height="40"/>
-  </a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="40" height="40"/>
-  </a>
-  <a href="https://opencv.org/" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="OpenCV" width="40" height="40"/>
-  </a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" alt="Pandas" width="40" height="40"/>
-  </a>
-  <a href="https://www.python.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/>
-  </a>
-  <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
-    <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" width="40" height="40"/>
-  </a>
-</p>
+Cloud/DevOps: AWS (S3, RDS, SageMaker, Glue, Bedrock), Azure, Linux.
 
-<h3 align="left">📊 Most Used Languages:</h3>
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=adimalkar&show_icons=true&locale=en&layout=compact" alt="adimalkar" />
-</p>
-  
-Thanks for stopping by! Feel free to explore my repositories and projects. 🌟
+Data Engineering: ETL/ELT Pipelines, Apache Spark, Multi-threaded Processing.
+
+Machine Learning & Analytics
+
+Frameworks: PyTorch, TensorFlow, Scikit-learn, LangChain, Keras.
+
+Visualization: Amazon QuickSight, Power BI (DAX), Tableau, Seaborn.
+
+Certifications
+
+AWS Certified AI Practitioner
+
+AWS Certified Machine Learning Engineer Associate
+
+🏆 Featured Projects
+
+FraudSight AI: Multi-Agent Insurance Fraud Detector Hackathon Winner | Python, OpenCV, Qwen-VL-Plus, SQLite
+
+Architected a "Vision-Critic" pipeline using a four-model "jury system" to separate visual forensic analysis from logical deduction.
+
+Engineered a unified system to process high-DPI PDF rasters and video keyframe extraction via OpenCV.
+
+AI-Powered Agentic Career Advisor AWS Bedrock (Claude V2), LangChain, RAG
+
+Designed a RAG pipeline that increased response relevance by 40% and reduced hallucinations by 75% through an alignment and safety framework.
+
+Implemented goal-seeking and tool-use behaviors within an autonomous chatbot architecture.
+
+Real-Time Speech-to-Speech Translation
+
+Python, PyTorch, Whisper, MarianMT, Threading
+
+Built a low-latency concurrent pipeline using a producer-consumer model, achieving a pipeline depth of ~2.8 seconds.
+
+Integrated a custom VAD system with <3ms frame latency, reducing false positives to 1.8%.
+
+Financial Data Integrity: Yahoo vs. CRSP Analysis
+
+Quantitative Analysis, Python, SQL
+
+Identified a 115.43% return discrepancy in a 10-year backtest, proving that survivorship bias in free data creates a 41.5% variance in annualized returns.
+
+📈 GitHub Stats
+
+<div align="center">
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3Dadimalkar%26show_icons%3Dtrue%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D1F6FEB%26icon_color%3D1F6FEB%26text_color%3D777777" alt="Aditya's GitHub stats" />
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3Dadimalkar%26layout%3Dcompact%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D1F6FEB%26text_color%3D777777" alt="Top Langs" />
+</div>
+
+📫 Let's Connect
+
+I'm always open to discussing AI-powered solutions, data-driven product growth, or open-source contributions.
+
+Currently located in: Jersey City, NJ
+
+Availability: Looking for 2026 Full-Time opportunities in Data Science & Product Analytics.
