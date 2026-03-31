@@ -104,7 +104,7 @@ I ran a quantitative backtest comparing Yahoo Finance data against CRSP (the gol
 <p align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" height="180" alt="Top Langs" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=adimalkar&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&sideNums=777777&sideLabels=777777&ring=1F6FEB&currStreakLabel=1F6FEB" height="180" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=adimalkar&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&sideNums=777777&sideLabels=777777&ring=1F6FEB&currStreakLabel=1F6FEB&hide_current_streak=true&hide_longest_streak=true" height="180" alt="Total Contributions" />
 </p>
 
 <br>
