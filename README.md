@@ -94,14 +94,13 @@ Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that 
 ## GitHub Analytics
 
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10" alt="GitHub Trophies" />
-  </a>
+  <img src="https://github-profile-trophy.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10&rank=-?" alt="" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" alt="Top Languages" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=adimalkar&theme=transparent&hide_border=true&ring=1F6FEB&currStreakLabel=1F6FEB&sideNums=777777&sideLabels=777777&dates=555555&currStreakNum=1F6FEB" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" height="165" />
+  &nbsp;&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api?username=adimalkar&show_icons=true&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&icon_color=1F6FEB&include_all_commits=true&count_private=true&hide=prs,issues,contribs&show=reviews&custom_title=Contributions" height="165" />
 </p>
 
 <br>
