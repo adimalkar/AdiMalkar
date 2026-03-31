@@ -93,15 +93,10 @@ Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that 
 
 ## GitHub Analytics
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10&rank=-?" alt="" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" height="165" />
-  &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api?username=adimalkar&show_icons=true&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&icon_color=1F6FEB&include_all_commits=true&count_private=true&hide=prs,issues,contribs&show=reviews&custom_title=Contributions" height="165" />
-</p>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" alt="Top Langs" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adimalkar&show_icons=true&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&icon_color=1F6FEB&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+</div>
 
 <br>
 
