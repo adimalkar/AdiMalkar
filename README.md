@@ -16,9 +16,11 @@
 
 ## About Me
 
-I'm a Data Scientist and Machine Learning Engineer pursuing my **M.S. in Data Science at Stevens Institute of Technology**. I specialize in **LLM-driven autonomous systems**, **scalable data pipelines**, and solving complex infrastructure problems with clean, production-ready code.
+I'm Aditya — a Data Scientist and ML Engineer currently finishing my **M.S. in Data Science at Stevens Institute of Technology** in Hoboken, NJ. I got into this field because I genuinely enjoy the process of taking messy, real-world problems and turning them into something a model can reason about.
 
-My work sits at the intersection of research and deployment — from orchestrating multi-agent RAG systems to building browser automation that bypasses strict DOM restrictions. I'm particularly interested in **AI safety & alignment** and finding deterministic guarantees within probabilistic models.
+Most of my work revolves around **LLM-driven autonomous systems** and **scalable data pipelines**. I've built things like multi-agent RAG systems that orchestrate specialized LLM workers, browser extensions that have to fight through Shadow DOM and framework-level restrictions to automate form filling, and speech-to-speech translation pipelines where every millisecond of latency matters. I care a lot about writing code that actually ships — not just notebooks that run once.
+
+Outside of the typical ML stack, I spend time thinking about **AI safety and alignment**. I find the challenge of getting deterministic, trustworthy behavior out of probabilistic models genuinely interesting, not just as an academic question but as something that matters the moment you put a model in front of real users. I'm also an **AWS Certified AI Practitioner** and **ML Engineer**, which keeps me grounded in how these systems run at scale in production.
 
 <br>
 
@@ -70,14 +72,14 @@ My work sits at the intersection of research and deployment — from orchestrati
 
 ## Highlights
 
-**FraudSight AI** · *Hackathon Winner*
-Architected a Vision-Critic pipeline with a four-model jury system — isolating visual forensic analysis (OpenCV keyframe extraction) from logical deduction for insurance fraud detection.
+### 🏆 FraudSight AI — *Hackathon Winner*
+Won a hackathon by building something I hadn't seen done before: a Vision-Critic pipeline where four separate models act as a "jury" for insurance fraud detection. The idea was to completely separate the visual forensic analysis (extracting and examining keyframes with OpenCV) from the logical deduction step, so neither could contaminate the other's judgment. Each model votes independently, and the system only flags fraud when there's consensus. It was a wild 48 hours but the approach held up under the judges' stress-testing.
 
-**Real-Time Speech-to-Speech Translation**
-Low-latency concurrent pipeline using a producer-consumer threaded architecture with Whisper and MarianMT. Achieved `<3ms` frame latency on the Voice Activity Detection stage.
+### ⚡ Real-Time Speech-to-Speech Translation
+This one started as a class project and turned into something I'm genuinely proud of. I built a concurrent translation pipeline using a producer-consumer threaded architecture — Whisper handles the speech recognition, MarianMT does translation, and Meta's MMS-TTS generates the output speech. The hardest part wasn't any single model; it was getting them to pipeline together without blowing up latency. Ended up hitting `<3ms` frame latency on the Voice Activity Detection stage using Silero VAD, and the full pipeline runs at ~2.8s depth. Also had to build custom hallucination filters because Whisper likes to make things up when it hears silence.
 
-**Financial Data Integrity Analysis**
-Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that survivorship bias in free API data produces a **41.5% variance** in annualized returns.
+### 🔍 Financial Data Integrity Analysis
+I ran a quantitative backtest comparing Yahoo Finance data against CRSP (the gold standard in academic finance) because I kept seeing people build trading strategies on free API data without questioning it. Turns out, survivorship bias in free data sources creates a **41.5% variance** in annualized returns compared to clean institutional data. That's not a rounding error — it's the difference between a strategy that looks profitable and one that isn't. Published the methodology and findings to help other researchers avoid the same trap.
 
 <br>
 
