@@ -1,70 +1,114 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=32&duration=3000&pause=1000&center=true&vCenter=true&multiline=true&width=800&height=120&lines=%3E_Hi%2C+I'm+Aditya+Malkar;Data+Scientist+%7C+ML+Engineer;Building+Autonomous+Agentic+Systems;Architecting+Data+Pipelines" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&center=true&vCenter=true&multiline=true&width=700&height=80&lines=%3E_+Aditya+Malkar;Data+Scientist+%7C+ML+Engineer" alt="Typing SVG" />
 </h1>
 
+<p align="center">
+  <em>Building autonomous AI systems &amp; high-performance data pipelines.</em>
+</p>
+
+<p align="center">
+  <a href="https://www.adityamalkar.com"><img src="https://img.shields.io/badge/Portfolio-1F6FEB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>&nbsp;
+  <a href="https://www.linkedin.com/in/aditya-malkar-694490253/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;
+  <a href="mailto:amalkar@stevens.edu"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+</p>
+
+<br>
+
+## About Me
+
+I'm a Data Scientist and Machine Learning Engineer pursuing my **M.S. in Data Science at Stevens Institute of Technology**. I specialize in **LLM-driven autonomous systems**, **scalable data pipelines**, and solving complex infrastructure problems with clean, production-ready code.
+
+My work sits at the intersection of research and deployment — from orchestrating multi-agent RAG systems to building browser automation that bypasses strict DOM restrictions. I'm particularly interested in **AI safety & alignment** and finding deterministic guarantees within probabilistic models.
+
+<br>
+
+## Currently Building
+
+| Project | Description |
+|:--------|:------------|
+| **Agentic AI Policy Navigator** | Multi-agent system using LangGraph, FastAPI, and Pinecone to navigate policy frameworks, resolve compliance conflicts, and generate impact assessments via specialized RAG pipelines. |
+| **AI DOM-Autofill Extension** | Browser extension that bypasses ATS security limitations through recursive Shadow DOM traversal, React/Vue native setter bypass, and async form observation via `MutationObserver`. |
+| **Alpha-Aware Hierarchical RL** | Training autonomous trading agents within the ABIDES limit order book simulator to study market microstructures and regime classification. |
+| **Neural Data Compression** | Researching lossy and lossless compression architectures for high-fidelity images and video. |
+
+<br>
+
+## Tech Stack
+
+<table>
+  <tr>
+    <td><b>Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python"/>
+      <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"/>
+      <img src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript"/>
+      <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>ML & AI</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"/>
+      <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
+      <img src="https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white" alt="LangChain"/>
+      <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
+      <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Infrastructure</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS"/>
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+      <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark"/>
+      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## Highlights
+
+**FraudSight AI** · *Hackathon Winner*
+Architected a Vision-Critic pipeline with a four-model jury system — isolating visual forensic analysis (OpenCV keyframe extraction) from logical deduction for insurance fraud detection.
+
+**Real-Time Speech-to-Speech Translation**
+Low-latency concurrent pipeline using a producer-consumer threaded architecture with Whisper and MarianMT. Achieved `<3ms` frame latency on the Voice Activity Detection stage.
+
+**Financial Data Integrity Analysis**
+Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that survivorship bias in free API data produces a **41.5% variance** in annualized returns.
+
+<br>
+
+## Certifications
+
+<p align="center">
+  <a href="https://www.credly.com/badges/4918c215-64ad-4064-9876-4b8a22908df0/public_url"><img src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="AWS Certified AI Practitioner" width="150"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.credly.com/badges/2fa341b2-fd74-44e7-a3e6-779b30db9992/public_url"><img src="https://images.credly.com/size/340x340/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png" alt="AWS Certified ML Engineer – Associate" width="150"/></a>
+</p>
+
+<br>
+
+## GitHub Analytics
+
 <div align="center">
-  <a href="https://www.adityamalkar.com"><img src="https://img.shields.io/badge/Portfolio-%E2%9C%A8-1F6FEB?style=for-the-badge&logo=Web&logoColor=white" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/aditya-malkar-694490253/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:adityamalkar0@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <img src="https://github-profile-trophy.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10" alt="GitHub Trophies"/>
 </div>
 
 <br>
 
-## 🚀 About Me
-
-Welcome to my digital workshop! I'm a Data Scientist and Machine Learning Engineer specializing in building **LLM-driven autonomous systems**, **high-performance data pipelines**, and cracking complex infrastructure problems. Currently, I'm expanding my ML expertise as a Master's student at the **Stevens Institute of Technology**.
-
-My work bridges the gap between research and production. Whether it's orchestrating complex multi-agent Retrieval-Augmented Generation (RAG) systems or bypassing strict browser DOM restrictions for automation, I focus on writing clean, scalable code that solves real-world bottlenecks. I am deeply passionate about AI safety, alignment, and finding deterministic solutions within probabilistic models.
-
-### 🔭 What I'm currently building
-- 🤖 **Agentic AI Policy Navigator:** An enterprise-grade multi-agent system built with **LangGraph**, **FastAPI**, and **Pinecone**. It orchestrates specialized LLM workers to dynamically navigate complex policy frameworks, resolve compliance conflicts, and generate impact assessments using specialized RAG pipelines.
-- 🧩 **Smarter AI DOM-Autofill:** Building a custom browser extension that systematically bypasses ATS security limitations that break mainstream tools (e.g., recursive Shadow DOM traversal, bypassing React/Vue native setters, and async dynamic form observation using structured `MutationObserver` triggers).
-- 📈 **Alpha-Aware Hierarchical RL (ABIDES):** Researching and training autonomous trading agents within the high-fidelity ABIDES artificial limit order book simulator to study market microstructures and regime classification.
-- 🗜️ **Neural Data Compression:** Actively researching lossy and lossless Neural Data Compression architectures for high-fidelity Images and Videos.
-
----
-
-## 💻 Tech Stack & Tools
-
-**Languages:**<br>
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![SQL](https://img.shields.io/badge/sql-4479A1.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
-
-**Machine Learning & AI:**<br>
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-
-**Cloud & Infrastructure:**<br>
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FCE229?style=for-the-badge&logo=apachespark&logoColor=black)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
----
-
-## 🧠 Deep Dives & Hackathons
-
-- 🏆 **FraudSight AI (Hackathon Winner):** Architected a Vision-Critic pipeline using a four-model jury system. It isolates visual forensic analysis (via OpenCV keyframe extraction) from logical deduction for insurance fraud detection.
-- ⚡ **Real-Time Speech-to-Speech Translation:** Built a low-latency concurrent pipeline using a producer-consumer threaded architecture with Whisper and MarianMT. Managed to hit a `<3ms` frame latency Voice Activity Detection (VAD) system.
-- 🔍 **Financial Data Integrity:** Ran a quantitative backtest comparing Yahoo Finance vs. CRSP data, proving that survivorship bias in free API data creates a massive 41.5% variance in annualized returns.
-
----
-
-## 📊 GitHub Analytics
-
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" alt="Top Langs" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=adimalkar&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&sideNums=777777&sideLabels=777777&ring=1F6FEB&currStreakLabel=1F6FEB" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adimalkar&show_icons=true&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=999999&icon_color=1F6FEB&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=999999&langs_count=6" alt="Top Languages" height="170"/>
 </div>
 
 <br>
 
 <div align="center">
-  <i>"In God we trust, all others must bring data." — W. Edwards Deming</i> <br>
-  <b>Looking to collaborate on open source or AI modeling? Let's connect!</b>
+  <i>"In God we trust, all others must bring data." — W. Edwards Deming</i>
+  <br><br>
+  <a href="https://www.adityamalkar.com"><b>adityamalkar.com</b></a>
 </div>
