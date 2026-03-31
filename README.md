@@ -95,7 +95,7 @@ Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that 
 
 <p align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy-kannan.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15&rank=-?,-C,-B" alt="trophy" />
+    <img src="https://github-profile-trophy-kannan.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15&rank=-?" alt="trophy" />
   </a>
 </p>
 
