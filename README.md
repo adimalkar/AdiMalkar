@@ -93,10 +93,10 @@ Quantitative backtest comparing Yahoo Finance vs. CRSP data, demonstrating that 
 
 ## GitHub Analytics
 
-[![trophy](https://github-profile-trophy-winning.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy-kannan.vercel.app/?username=adimalkar&theme=darkhub&no-frame=true&no-bg=true&column=6&margin-w=10)](https://github.com/ryo-ma/github-profile-trophy)
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" alt="Top Langs" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adimalkar&layout=compact&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&langs_count=6" alt="Top Langs" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=adimalkar&theme=transparent&hide_border=true&title_color=1F6FEB&text_color=777777&sideNums=777777&sideLabels=777777&ring=1F6FEB&currStreakLabel=1F6FEB" alt="GitHub Streak" />
 </div>
 
