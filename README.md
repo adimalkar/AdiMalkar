@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <em>Building autonomous AI systems &amp; high-performance data pipelines.</em> 🚀
+  <em>Building autonomous AI systems &amp; high-performance data pipelines.</em>
 </p>
 
 <p align="center">
@@ -112,4 +112,3 @@ I ran a quantitative backtest comparing Yahoo Finance data against CRSP (the gol
   <br><br>
   <a href="https://www.adityamalkar.com"><b>adityamalkar.com</b></a>
 </div>
-
