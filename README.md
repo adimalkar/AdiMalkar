@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <em>Building autonomous AI systems &amp; high-performance data pipelines.</em>
+  <em>Building autonomous AI systems &amp; high-performance data pipelines.</em> 🚀
 </p>
 
 <p align="center">
