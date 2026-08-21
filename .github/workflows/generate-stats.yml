@@ -1,0 +1,33 @@
+name: Generate Metrics
+on:
+  # Run daily at midnight
+  schedule:
+    - cron: "0 0 * * *"
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate Top Languages SVG
+        uses: lowlighter/metrics@latest
+        with:
+          # Use the PAT to read private repositories
+          token: ${{ secrets.GH_STATS_TOKEN }}
+          
+          # Output file
+          filename: top-langs.svg
+          
+          # Disable the base features (we only want the languages card)
+          base: ""
+          
+          # Enable Languages Plugin
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_details: percentage
+          
+          # Styling to match the rest of the profile
+          config_theme: tokyonight
