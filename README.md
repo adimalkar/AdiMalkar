@@ -28,10 +28,10 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 | Project | Description |
 |:--------|:------------|
-| **Agentic AI Policy Navigator** | Multi-agent system using LangGraph, FastAPI, and Pinecone to navigate policy frameworks, resolve compliance conflicts, and generate impact assessments via specialized RAG pipelines. |
-| **AI DOM-Autofill Extension** | Browser extension that bypasses ATS security limitations through recursive Shadow DOM traversal, React/Vue native setter bypass, and async form observation via `MutationObserver`. |
-| **Alpha-Aware Hierarchical RL** | Training autonomous trading agents within the ABIDES limit order book simulator to study market microstructures and regime classification. |
-| **Neural Data Compression** | Researching lossy and lossless compression architectures for high-fidelity images and video. |
+| **[Termnova](https://github.com/adimalkar/termnova)** | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. |
+| **[Alpha-Aware Hierarchical RL](https://github.com/adimalkar/alpha-aware-hrl)** | Autonomous trading agents in ABIDES limit order book simulations studying market microstructures and regime classification. |
+| **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Multi-source B2B intelligence engine extracting supplier risk signals, financial health indicators, and market trends. |
+| **[AI DOM-Autofill Extension](https://github.com/adimalkar/Autofill-Extension)** | Browser automation engine bypassing ATS limitations via recursive Shadow DOM traversal and React synthetic event dispatcher overrides. |
 
 <br>
 
@@ -61,6 +61,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
     <td><b>Infrastructure</b></td>
     <td>
       <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS"/>
+      <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="GCP"/>
       <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
       <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark"/>
       <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
@@ -72,14 +73,17 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 ## Highlights
 
-### 🏆 FraudSight AI — *Hackathon Winner*
-Won a hackathon by building something I hadn't seen done before: a Vision-Critic pipeline where four separate models act as a "jury" for insurance fraud detection. The idea was to completely separate the visual forensic analysis (extracting and examining keyframes with OpenCV) from the logical deduction step, so neither could contaminate the other's judgment. Each model votes independently, and the system only flags fraud when there's consensus. It was a wild 48 hours but the approach held up under the judges' stress-testing.
+### 📄 Termnova — *AI Contract Intelligence Platform*
+Engineered an enterprise-grade contract analysis platform utilizing **LangGraph multi-agent orchestration** and **Hybrid RAG** (dense vector embeddings combined with sparse BM25 reranking). Implemented asynchronous ingestion queues with Celery, end-to-end distributed tracing via **OpenTelemetry**, and strict quantitative RAG evaluation metrics (`faithfulness`, `context precision`, `hallucination scoring`) to audit complex legal agreements with deterministic precision.
 
-### ⚡ Real-Time Speech-to-Speech Translation
-This one started as a class project and turned into something I'm genuinely proud of. I built a concurrent translation pipeline using a producer-consumer threaded architecture — Whisper handles the speech recognition, MarianMT does translation, and Meta's MMS-TTS generates the output speech. The hardest part wasn't any single model; it was getting them to pipeline together without blowing up latency. Ended up hitting `<3ms` frame latency on the Voice Activity Detection stage using Silero VAD, and the full pipeline runs at ~2.8s depth. Also had to build custom hallucination filters because Whisper likes to make things up when it hears silence.
+### 🏆 Multimodal Fraud Detector (FraudSight AI) — *Hackathon Winner*
+Won 1st place in a Databricks Hackathon by designing a **Vision-Critic multi-model jury architecture** for insurance claim fraud detection. Visual forensic analysis (OpenCV keyframe extraction and metadata artifact detection) was strictly decoupled from logical LLM deduction to eliminate decision contamination. Built weighted heuristic risk-scoring models that evaluate cross-modal signals across video, images, and transaction metadata.
 
-### 🔍 Financial Data Integrity Analysis
-I ran a quantitative backtest comparing Yahoo Finance data against CRSP (the gold standard in academic finance) because I kept seeing people build trading strategies on free API data without questioning it. Turns out, survivorship bias in free data sources creates a **41.5% variance** in annualized returns compared to clean institutional data. That's not a rounding error — it's the difference between a strategy that looks profitable and one that isn't. Published the methodology and findings to help other researchers avoid the same trap.
+### ⚡ Low-Latency Real-Time Speech-to-Speech Translation
+Architected a concurrent, low-latency audio translation pipeline using a producer-consumer threaded design across **Whisper (ASR)**, **MarianMT (Neural Translation)**, and **Meta MMS (TTS)**. Achieved `<3ms` Voice Activity Detection latency with Silero VAD, sub-3s end-to-end latency, and dynamic gain-normalization filters to eliminate background static.
+
+### 🔬 Distributed Medical Vision (`Diabetic Retinopathy Classification`)
+Developed a distributed medical computer vision pipeline on **Google Cloud Platform (GCP)** leveraging **PySpark and Spark ML** for large-scale fundus image preprocessing. Applied PyTorch deep neural networks with custom **CLAHE (Contrast Limited Adaptive Histogram Equalization)** contrast-enhancement algorithms to classify diabetic retinopathy severity while preserving critical microvascular pathology.
 
 <br>
 
