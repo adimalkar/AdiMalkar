@@ -28,6 +28,3 @@ jobs:
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_details: percentage
-          
-          # Styling to match the rest of the profile
-          config_theme: tokyonight
