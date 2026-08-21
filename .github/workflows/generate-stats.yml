@@ -26,8 +26,8 @@ jobs:
           
           # Enable Languages Plugin
           plugin_languages: yes
-          plugin_languages_indepth: yes
           plugin_languages_limit: 8
           plugin_languages_details: percentage
+          plugin_languages_skipped: Diabetic-Retinopathy-Severity-Classification, Diabetes-Prediction, MA-574-A-PA
           extras_css: |
             svg.bar { margin-bottom: 24px !important; }
