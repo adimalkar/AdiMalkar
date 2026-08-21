@@ -106,7 +106,7 @@ Developed a distributed medical computer vision pipeline on **Google Cloud Platf
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs?username=adimalkar&layout=compact&theme=tokyonight&hide_border=true&hide=Jupyter%20Notebook&langs_count=8" height="195" alt="Most Used Languages" />&nbsp;&nbsp;
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=adimalkar&theme=tokyonight" height="195" alt="Most Used Languages" />&nbsp;&nbsp;
   <img src="https://github-readme-streak-stats-eight.vercel.app/?user=adimalkar&theme=tokyonight&hide_border=true" height="195" alt="Contribution Streak" />
 </p>
 
