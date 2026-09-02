@@ -28,7 +28,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 | Project | Description |
 |:--------|:------------|
-| **[Termnova](https://github.com/adimalkar/termnova)** | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. Iterating fast — hybrid retrieval moving into PostgreSQL, durable idempotent ingestion, OpenCode routing with DeepSeek fallback. |
+| **[Termnova](https://github.com/adimalkar/termnova)** · [*live demo*](https://termnova.onrender.com) | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. Iterating fast — hybrid retrieval moving into PostgreSQL, durable idempotent ingestion, OpenCode routing with DeepSeek fallback. |
 | **[Cadence](https://github.com/adimalkar/cadence-ci)** | Evidence-grounded CI intelligence — reads your build history over the plain GitHub API, quantifies what it costs in minutes and dollars, and opens the PR that fixes it. No install, no config, every number replayed from real runs. |
 | **[Alpha-Aware Hierarchical RL](https://github.com/adimalkar/alpha-aware-hrl)** | Autonomous trading agents in ABIDES limit order book simulations studying market microstructures and regime classification. |
 | **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Multi-source B2B intelligence engine extracting supplier risk signals, financial health indicators, and market trends. |
@@ -57,8 +57,11 @@ Landing fixes and features in ML, data, and evaluation tooling — merging into 
     <td><b>Languages</b></td>
     <td>
       <img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54" alt="Python"/>
-      <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"/>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
       <img src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript"/>
+      <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"/>
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
       <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R"/>
     </td>
   </tr>
@@ -68,8 +71,28 @@ Landing fixes and features in ML, data, and evaluation tooling — merging into 
       <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"/>
       <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
       <img src="https://img.shields.io/badge/LangChain-121212?style=flat-square&logo=chainlink&logoColor=white" alt="LangChain"/>
+      <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face"/>
       <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
       <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"/>
+      <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Frameworks</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Data</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+      <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis"/>
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
+      <img src="https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white" alt="Celery"/>
     </td>
   </tr>
   <tr>
@@ -78,7 +101,9 @@ Landing fixes and features in ML, data, and evaluation tooling — merging into 
       <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS"/>
       <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="GCP"/>
       <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
-      <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark"/>
+      <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
+      <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+      <img src="https://img.shields.io/badge/OpenTelemetry-F54C00?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry"/>
       <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
     </td>
   </tr>
@@ -126,7 +151,7 @@ Developed a distributed medical computer vision pipeline on **Google Cloud Platf
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adimalkar&theme=react-dark&hide_border=true&area=true" width="100%" alt="Aditya's GitHub Activity Graph" />
+  <img src="https://gh-readme-activity-graph.vercel.app/graph?username=adimalkar&theme=react-dark&hide_border=true&area=true" width="100%" alt="Aditya's GitHub Activity Graph" />
 </p>
 
 <br>
