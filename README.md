@@ -28,10 +28,25 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 | Project | Description |
 |:--------|:------------|
-| **[Termnova](https://github.com/adimalkar/termnova)** | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. |
+| **[Termnova](https://github.com/adimalkar/termnova)** | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. Iterating fast — hybrid retrieval moving into PostgreSQL, durable idempotent ingestion, OpenCode routing with DeepSeek fallback. |
+| **[Cadence](https://github.com/adimalkar/cadence-ci)** | Evidence-grounded CI intelligence — reads your build history over the plain GitHub API, quantifies what it costs in minutes and dollars, and opens the PR that fixes it. No install, no config, every number replayed from real runs. |
 | **[Alpha-Aware Hierarchical RL](https://github.com/adimalkar/alpha-aware-hrl)** | Autonomous trading agents in ABIDES limit order book simulations studying market microstructures and regime classification. |
 | **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Multi-source B2B intelligence engine extracting supplier risk signals, financial health indicators, and market trends. |
 | **[AI DOM-Autofill Extension](https://github.com/adimalkar/Autofill-Extension)** | Browser automation engine bypassing ATS limitations via recursive Shadow DOM traversal and React synthetic event dispatcher overrides. |
+
+<br>
+
+## Open Source Contributions
+
+Landing fixes and features in ML, data, and evaluation tooling — merging into maintenance-heavy codebases with full test discipline.
+
+| Repo | PR | What it does |
+|:-----|:---|:-------------|
+| **[kornia](https://github.com/kornia/kornia)** | [#4135](https://github.com/kornia/kornia/pull/4135) (merged) | Revived LoFTR's two end-to-end accuracy tests on CPU — a dead version guard had silently skipped them on every supported torch. |
+| **[Arize AI Phoenix](https://github.com/Arize-ai/phoenix)** | [#15683](https://github.com/Arize-ai/phoenix/pull/15683) (merged) | Fixed playground/evaluator clients dropping Anthropic & Bedrock tool-`choice` and `strict` settings before the request went out. |
+| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | [#8420](https://github.com/sqlfluff/sqlfluff/pull/8420) (merged) | Added full grammar for Snowflake `CREATE/ALTER/DROP ALERT` DDL. |
+| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | [#8411](https://github.com/sqlfluff/sqlfluff/pull/8411) (merged) | Fixed reflow alignment pads when an alignment predecessor sat on a different line (leading-comma T-SQL). |
+| **[Stanford DSPy](https://github.com/stanfordnlp/dspy)** | [#10275](https://github.com/stanfordnlp/dspy/pull/10275) (open) | Rejects reserved `trajectory` as an output field in ReAct — surfaces the collision at construction instead of mid-`forward()` after billed LM calls. |
 
 <br>
 
