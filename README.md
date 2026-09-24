@@ -28,11 +28,11 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 | Project | Description |
 |:--------|:------------|
-| **[Termnova](https://github.com/adimalkar/termnova)** · [*live demo*](https://termnova.onrender.com) | Production-grade AI contract intelligence platform with hybrid RAG, LangGraph multi-agent workflows, OpenTelemetry tracing, and hallucination guardrails. Iterating fast — hybrid retrieval moving into PostgreSQL, durable idempotent ingestion, OpenCode routing with DeepSeek fallback. |
-| **[Cadence](https://github.com/adimalkar/cadence-ci)** | Evidence-grounded CI intelligence — reads your build history over the plain GitHub API, quantifies what it costs in minutes and dollars, and opens the PR that fixes it. No install, no config, every number replayed from real runs. |
-| **[Alpha-Aware Hierarchical RL](https://github.com/adimalkar/alpha-aware-hrl)** | Autonomous trading agents in ABIDES limit order book simulations studying market microstructures and regime classification. |
-| **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Multi-source B2B intelligence engine extracting supplier risk signals, financial health indicators, and market trends. |
-| **[AI DOM-Autofill Extension](https://github.com/adimalkar/Autofill-Extension)** | Browser automation engine bypassing ATS limitations via recursive Shadow DOM traversal and React synthetic event dispatcher overrides. |
+| **[Termnova](https://github.com/adimalkar/termnova)** · [*live demo*](https://termnova.onrender.com) | Production-grade AI contract intelligence platform with hybrid RAG (dense vector + BM25 reranking), LangGraph multi-agent orchestration, OpenTelemetry distributed tracing, Celery async queues, and hallucination guardrails. |
+| **[Cadence](https://github.com/adimalkar/cadence-ci)** | Open-source CI intelligence for GitHub Actions — analyzes build history over the plain GitHub API, quantifies wasted runtime and dollar costs, and automatically opens the PR that fixes it with zero configuration. |
+| **[Multimodal Fraud Detector](https://github.com/adimalkar/multimodal-fraud-detector)** · [*live demo*](https://frontend-adimalkars-projects.vercel.app) | Multi-agent AI pipeline detecting generative-AI fraud in insurance claims across images, PDFs, and video. Employs a "Jury System" of Qwen-VL forensic vision analysis paired with DeepSeek-R1 / Qwen / GLM critic agents with majority voting. |
+| **[QuantServe](https://github.com/adimalkar/quantserve)** | Hardware-aware LLM deployment optimizer & inference systems engine — surrogate latency/VRAM models predicting TTFT and TPOT, custom Triton fused W4A16 dequant kernels, and automated Docker / Kubernetes manifest export. |
+| **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Real-time supplier intelligence & quality monitoring engine — agentic AI root-cause analysis, edge computer vision defect detection (YOLOv8), and distributed Kafka/Airflow data streaming pipelines. |
 
 <br>
 
