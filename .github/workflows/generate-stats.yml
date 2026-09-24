@@ -1,8 +1,8 @@
 name: Generate Metrics
 on:
-  # Run daily at midnight
+  # Run every 6 hours
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */6 * * *"
   # Allow manual trigger
   workflow_dispatch:
 
@@ -72,3 +72,23 @@ jobs:
                 color: #24292f !important;
               }
             }
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Update Open Source Contributions Table
+        env:
+          GH_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: |
+          python3 .github/scripts/update_contributions.py
+
+      - name: Commit and Push README Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+          git add README.md
+          if ! git diff --staged --quiet; then
+            git commit -m "docs: auto-update open source contributions table [skip ci]"
+            git push
+          fi
