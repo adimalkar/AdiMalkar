@@ -38,15 +38,41 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 
 ## Open Source Contributions
 
-Landing fixes and features in ML, data, and evaluation tooling — merging into maintenance-heavy codebases with full test discipline.
+<p align="center">
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Amicrosoft"><img src="https://img.shields.io/badge/Microsoft-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3ANVIDIA"><img src="https://img.shields.io/badge/NVIDIA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Alangchain-ai"><img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Astanfordnlp"><img src="https://img.shields.io/badge/Stanford_DSPy-8C1515?style=for-the-badge&logo=stanford&logoColor=white" alt="Stanford NLP"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3AArize-ai"><img src="https://img.shields.io/badge/Arize_Phoenix-FF1493?style=for-the-badge&logo=datadog&logoColor=white" alt="Arize AI"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Akornia"><img src="https://img.shields.io/badge/Kornia-00D2B4?style=for-the-badge&logo=pytorch&logoColor=white" alt="Kornia"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Asqlfluff"><img src="https://img.shields.io/badge/SQLFluff-2C3E50?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQLFluff"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3AcrewAIInc"><img src="https://img.shields.io/badge/CrewAI-FF4500?style=for-the-badge&logo=crewai&logoColor=white" alt="CrewAI"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Amlc-ai"><img src="https://img.shields.io/badge/MLC--AI-4B0082?style=for-the-badge&logo=apache&logoColor=white" alt="MLC-AI"/></a>&nbsp;
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+org%3Afivetran"><img src="https://img.shields.io/badge/Fivetran-0068FF?style=for-the-badge&logo=fivetran&logoColor=white" alt="Fivetran"/></a>
+</p>
 
-| Repo | PR | What it does |
-|:-----|:---|:-------------|
-| **[kornia](https://github.com/kornia/kornia)** | [#4135](https://github.com/kornia/kornia/pull/4135) (merged) | Revived LoFTR's two end-to-end accuracy tests on CPU — a dead version guard had silently skipped them on every supported torch. |
-| **[Arize AI Phoenix](https://github.com/Arize-ai/phoenix)** | [#15683](https://github.com/Arize-ai/phoenix/pull/15683) (merged) | Fixed playground/evaluator clients dropping Anthropic & Bedrock tool-`choice` and `strict` settings before the request went out. |
-| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | [#8420](https://github.com/sqlfluff/sqlfluff/pull/8420) (merged) | Added full grammar for Snowflake `CREATE/ALTER/DROP ALERT` DDL. |
-| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | [#8411](https://github.com/sqlfluff/sqlfluff/pull/8411) (merged) | Fixed reflow alignment pads when an alignment predecessor sat on a different line (leading-comma T-SQL). |
-| **[Stanford DSPy](https://github.com/stanfordnlp/dspy)** | [#10275](https://github.com/stanfordnlp/dspy/pull/10275) (open) | Rejects reserved `trajectory` as an output field in ReAct — surfaces the collision at construction instead of mid-`forward()` after billed LM calls. |
+Landing fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+
+| Repo | Stars | PR | Impact |
+|:-----|:------|:---|:-------|
+| **[NVIDIA numba-cuda-mlir](https://github.com/NVIDIA/numba-cuda-mlir)** | <a href="https://github.com/NVIDIA/numba-cuda-mlir"><img src="https://img.shields.io/github/stars/NVIDIA/numba-cuda-mlir?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#307](https://github.com/NVIDIA/numba-cuda-mlir/pull/307) (merged) | Fixed float-to-bool conversion in MLIR lowering pipeline by comparing against zero instead of raw truncations. |
+| **[Microsoft ONNX Runtime](https://github.com/microsoft/onnxruntime)** | <a href="https://github.com/microsoft/onnxruntime"><img src="https://img.shields.io/github/stars/microsoft/onnxruntime?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#32703](https://github.com/microsoft/onnxruntime/pull/32703) (open) | Reconnected producer edge in the graph optimizer when `DivMulFusion` substitutes Mul's input. |
+| **[Stanford DSPy](https://github.com/stanfordnlp/dspy)** | <a href="https://github.com/stanfordnlp/dspy"><img src="https://img.shields.io/github/stars/stanfordnlp/dspy?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#10275](https://github.com/stanfordnlp/dspy/pull/10275) (open) | Rejects reserved `trajectory` as an output field in ReAct — surfaces collision at construction instead of mid-run after billed LM calls. |
+| **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** | <a href="https://github.com/Arize-ai/phoenix"><img src="https://img.shields.io/github/stars/Arize-ai/phoenix?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#15683](https://github.com/Arize-ai/phoenix/pull/15683) (merged) | Fixed playground/evaluator clients silently dropping Anthropic & Bedrock tool-`choice` and `strict` configurations prior to dispatch. |
+| **[MLC-AI xgrammar](https://github.com/mlc-ai/xgrammar)** | <a href="https://github.com/mlc-ai/xgrammar"><img src="https://img.shields.io/github/stars/mlc-ai/xgrammar?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#929](https://github.com/mlc-ai/xgrammar/pull/929) (open) | Resolved JSON Schema references through array indices for grammar-guided LLM structured output generation. |
+| **[CrewAI](https://github.com/crewAIInc/crewAI)** | <a href="https://github.com/crewAIInc/crewAI"><img src="https://img.shields.io/github/stars/crewAIInc/crewAI?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#7742](https://github.com/crewAIInc/crewAI/pull/7742) (open) | Explicitly fails when expected evaluation metric has no score instead of silently propagating corrupted agent benchmark results. |
+| **[kornia](https://github.com/kornia/kornia)** | <a href="https://github.com/kornia/kornia"><img src="https://img.shields.io/github/stars/kornia/kornia?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#4135](https://github.com/kornia/kornia/pull/4135) (merged) | Revived LoFTR's two end-to-end accuracy tests on CPU — a dead version guard had silently skipped them on every supported torch version. |
+| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | <a href="https://github.com/sqlfluff/sqlfluff"><img src="https://img.shields.io/github/stars/sqlfluff/sqlfluff?style=flat-square&label=%E2%98%85" alt="Stars"/></a> | [#8420](https://github.com/sqlfluff/sqlfluff/pull/8420) (merged) | Added full AST grammar for Snowflake `CREATE/ALTER/DROP ALERT` DDL statements. |
+
+<p align="center">
+  <img src="notable.svg" alt="Notable Open Source Contributions" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+is%3Amerged">
+    <img src="https://img.shields.io/badge/GitHub-View_All_60+_Merged_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="View All Merged PRs" />
+  </a>
+</p>
 
 <br>
 

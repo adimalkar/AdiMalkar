@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="150" viewBox="0 0 600 150">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #58a6ff; }
+      .badge-bg { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 6px; }
+      .repo-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #c9d1d9; }
+      .stars { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; fill: #8b949e; }
+      .star-icon { fill: #e3b341; }
+    </style>
+  </defs>
+  
+  <!-- Header -->
+  <g transform="translate(15, 25)">
+    <svg viewBox="0 0 16 16" width="16" height="16" fill="#58a6ff">
+      <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+    </svg>
+    <text x="24" y="13" class="title">Notable Contributions across Ecosystem</text>
+  </g>
+
+  <!-- Row 1 -->
+  <g transform="translate(15, 45)">
+    <!-- Microsoft ONNX Runtime -->
+    <g transform="translate(0, 0)">
+      <rect class="badge-bg" width="180" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">microsoft/onnxruntime</text>
+      <text x="12" y="32" class="stars">★ 16.5k · Open Source</text>
+    </g>
+    <!-- NVIDIA numba-cuda-mlir -->
+    <g transform="translate(195, 0)">
+      <rect class="badge-bg" width="185" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">NVIDIA/numba-cuda-mlir</text>
+      <text x="12" y="32" class="stars">★ 1.2k · Compiler Lowering</text>
+    </g>
+    <!-- Stanford DSPy -->
+    <g transform="translate(395, 0)">
+      <rect class="badge-bg" width="185" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">stanfordnlp/dspy</text>
+      <text x="12" y="32" class="stars">★ 21.8k · Prompt Framework</text>
+    </g>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(15, 95)">
+    <!-- Arize Phoenix -->
+    <g transform="translate(0, 0)">
+      <rect class="badge-bg" width="180" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">Arize-ai/phoenix</text>
+      <text x="12" y="32" class="stars">★ 6.4k · LLM Tracing</text>
+    </g>
+    <!-- Kornia -->
+    <g transform="translate(195, 0)">
+      <rect class="badge-bg" width="185" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">kornia/kornia</text>
+      <text x="12" y="32" class="stars">★ 10.4k · PyTorch Vision</text>
+    </g>
+    <!-- CrewAI / MLC-AI -->
+    <g transform="translate(395, 0)">
+      <rect class="badge-bg" width="185" height="40" rx="6"/>
+      <text x="12" y="19" class="repo-name">crewAIInc / mlc-ai</text>
+      <text x="12" y="32" class="stars">★ 28.5k · Agent Platforms</text>
+    </g>
+  </g>
+</svg>
