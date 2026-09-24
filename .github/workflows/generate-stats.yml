@@ -75,6 +75,9 @@ jobs:
 
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_STATS_TOKEN }}
+          ref: main
 
       - name: Update Open Source Contributions Table
         env:
@@ -86,9 +89,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add README.md
           if ! git diff --staged --quiet; then
             git commit -m "docs: auto-update open source contributions table [skip ci]"
+            git pull --rebase origin main
             git push
           fi
