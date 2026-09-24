@@ -42,5 +42,33 @@ jobs:
           plugin_notable_from: organization
           plugin_notable_types: commit, pull_request
           plugin_notable_filter: stars:>100
-          plugin_notable_indepth: yes
+          plugin_notable_indepth: no
           plugin_notable_repositories: yes
+          extras_css: |
+            :root { color-scheme: light dark; }
+            .name, .organization.name { color: #24292f !important; }
+            .contribution.organization { border-color: #d0d7de !important; background-color: #f6f8fa !important; }
+            @media (prefers-color-scheme: dark) {
+              svg { color: #c9d1d9 !important; }
+              h2 { color: #58a6ff !important; }
+              h2 svg { fill: #58a6ff !important; }
+              .field svg { fill: #8b949e !important; }
+              .name, .organization.name { color: #f0f6fc !important; }
+              .contribution.organization {
+                border-color: #30363d !important;
+                background-color: rgba(110, 118, 129, 0.25) !important;
+                color: #f0f6fc !important;
+              }
+            }
+            @media (prefers-color-scheme: light) {
+              svg { color: #24292f !important; }
+              h2 { color: #0969da !important; }
+              h2 svg { fill: #0969da !important; }
+              .field svg { fill: #57606a !important; }
+              .name, .organization.name { color: #24292f !important; }
+              .contribution.organization {
+                border-color: #d0d7de !important;
+                background-color: #f6f8fa !important;
+                color: #24292f !important;
+              }
+            }
