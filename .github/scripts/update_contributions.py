@@ -11,6 +11,7 @@ import re
 import html
 import json
 import base64
+import hashlib
 import urllib.parse
 import urllib.request
 import subprocess
@@ -188,7 +189,8 @@ CHAR_WIDTHS = dict(zip(
      833, 722, 778, 667, 778, 722, 667, 611, 722, 667, 944, 667, 667, 611] + [556] * 10 + [975, 333, 556, 278],
 ))
 
-CHIP_SVG = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="32" viewBox="0 0 {width} 32">
+CHIP_SVG = """<!-- {key} -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="32" viewBox="0 0 {width} 32">
 <style>
 .bg{{fill:#f6f8fa;stroke:#d0d7de}}.name{{fill:#1f2328}}
 @media (prefers-color-scheme: dark){{.bg{{fill:#161b22;stroke:#30363d}}.name{{fill:#e6edf3}}}}
@@ -203,11 +205,17 @@ CHIP_SVG = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3
 def chip_text_width(login):
     return round(sum(CHAR_WIDTHS.get(c, 611) for c in f'@{login}') * 14 / 1000)
 
-def chip_svg(login, avatar_bytes, content_type, width):
+def chip_key(avatar_url, width):
+    """What a chip is drawn from. The avatar CDN doesn't always return identical bytes for
+    the same avatar, so a chip is redrawn only when this changes, not on every run."""
+    template = hashlib.sha256(CHIP_SVG.encode()).hexdigest()[:12]
+    return f'avatar={avatar_url} width={width} template={template}'
+
+def chip_svg(login, avatar_bytes, content_type, width, key):
     label = f'@{login}'
     text_width = chip_text_width(login)
     avatar = f'data:{content_type};base64,{base64.b64encode(avatar_bytes).decode()}'
-    return CHIP_SVG.format(width=width, rect_width=width - 1, text_width=text_width,
+    return CHIP_SVG.format(key=key, width=width, rect_width=width - 1, text_width=text_width,
                            avatar=avatar, label=html.escape(label))
 
 def fetch_avatar(avatar_url):
@@ -233,8 +241,11 @@ def org_chips(repos, sort_key, chip_dir):
     chips = []
     for login, avatar_url in owners.items():
         filename = f'{login.lower()}.svg'
-        with open(os.path.join(chip_dir, filename), 'w', encoding='utf-8') as f:
-            f.write(chip_svg(login, *fetch_avatar(avatar_url), width))
+        path = os.path.join(chip_dir, filename)
+        key = chip_key(avatar_url, width)
+        if not (os.path.exists(path) and open(path, encoding='utf-8').readline().strip() == f'<!-- {key} -->'):
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(chip_svg(login, *fetch_avatar(avatar_url), width, key))
         chips.append(
             f'<a href="{search_url(f"user:{login}")}">'
             f'<img src="{os.path.basename(chip_dir)}/{filename}" height="32" alt="@{html.escape(login)}"/></a>'
