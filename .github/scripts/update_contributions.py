@@ -78,8 +78,12 @@ def search_url(extra=''):
 
 def fetch_prs(token):
     query = """
-    query($q: String!) {
-      search(query: $q, type: ISSUE, first: 100) {
+    query($q: String!, $after: String) {
+      search(query: $q, type: ISSUE, first: 100, after: $after) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
         nodes {
           ... on PullRequest {
             number
@@ -109,19 +113,26 @@ def fetch_prs(token):
     if token:
         headers['Authorization'] = f'Bearer {token}'
 
-    req = urllib.request.Request(
-        'https://api.github.com/graphql',
-        data=json.dumps({'query': query, 'variables': {'q': search_qualifiers()}}).encode('utf-8'),
-        headers=headers
-    )
+    # A page holds at most 100 results, so follow the cursor until the search is exhausted.
+    nodes, after = [], None
+    while True:
+        req = urllib.request.Request(
+            'https://api.github.com/graphql',
+            data=json.dumps({'query': query, 'variables': {'q': search_qualifiers(), 'after': after}}).encode('utf-8'),
+            headers=headers
+        )
 
-    with urllib.request.urlopen(req) as resp:
-        res = json.loads(resp.read().decode('utf-8'))
+        with urllib.request.urlopen(req) as resp:
+            res = json.loads(resp.read().decode('utf-8'))
 
-    if 'errors' in res:
-        raise RuntimeError(f"GraphQL error: {res['errors']}")
+        if 'errors' in res:
+            raise RuntimeError(f"GraphQL error: {res['errors']}")
 
-    return res['data']['search']['nodes']
+        search = res['data']['search']
+        nodes += search['nodes']
+        if not search['pageInfo']['hasNextPage']:
+            return nodes
+        after = search['pageInfo']['endCursor']
 
 def clean_pr_title(title):
     # Remove conventional commit prefixes like feat:, fix(scope):, [BUGFIX], etc.
