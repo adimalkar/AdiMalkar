@@ -10,6 +10,7 @@ import os
 import re
 import html
 import json
+import base64
 import urllib.parse
 import urllib.request
 import subprocess
@@ -19,22 +20,22 @@ USER = 'adimalkar'
 # Pull requests outside these owners count as open source contributions.
 EXCLUDED_OWNERS = ('adimalkar', 'hiringfleet')
 
-# One short line per repository, kept to about 50 characters so it fits on one line of its
-# card. Repositories without an entry fall back to the title of their latest pull request.
+# One line per repository, about 80 characters, so it fills its card in two lines at most.
+# Repositories without an entry fall back to the title of their latest pull request.
 CURATED_IMPACTS = {
-    'kornia/kornia': 'Augmentation fixes; revived LoFTR CPU tests',
-    'fivetran/great_expectations': 'Infinite `Decimal` serialization; typed test modules',
-    'sqlfluff/sqlfluff': 'Snowflake `ALERT` grammar; T-SQL reflow alignment',
-    'Arize-ai/phoenix': 'Kept Anthropic/Bedrock tool choice and `strict`',
-    'microsoft/PyRIT': 'Non-ASCII words in the PUZZLED keyword masker',
-    'mlc-ai/xgrammar': 'JSON Schema references through array indices',
-    'NVIDIA/numba-cuda-mlir': 'Float-to-bool conversion in the MLIR lowering',
-    'NousResearch/hermes-agent': 'Show saved working directories in session lists',
-    'browser-use/browser-use': 'Accept optional types on special action params',
-    'vllm-project/vllm': 'Original context length for mRoPE YaRN correction',
-    'crewAIInc/crewAI': 'Fail when an expected metric has no score',
-    'stanfordnlp/dspy': 'Reject the reserved `trajectory` output in ReAct',
-    'microsoft/onnxruntime': 'Keep the producer edge in `DivMulFusion`',
+    'kornia/kornia': 'Fixed PatchMix, RandomResizedCrop and rank errors; revived LoFTR CPU tests',
+    'fivetran/great_expectations': 'Serialized infinite `Decimal`s instead of raising; type-checked 8 excluded test modules',
+    'sqlfluff/sqlfluff': 'Snowflake `ALERT` DDL grammar; reflow alignment for leading-comma T-SQL',
+    'Arize-ai/phoenix': 'Kept Anthropic and Bedrock tool choice and `strict` settings in the playground and evals',
+    'microsoft/PyRIT': 'Let the PUZZLED keyword masker select words with non-ASCII letters',
+    'mlc-ai/xgrammar': 'Resolved JSON Schema references through array indices for structured generation',
+    'NVIDIA/numba-cuda-mlir': 'Float-to-bool conversion compares against zero instead of truncating',
+    'NousResearch/hermes-agent': 'Show saved working directories in CLI session lists',
+    'browser-use/browser-use': 'Accept `X | None` annotations on special action parameters',
+    'vllm-project/vllm': 'Use the original context length for the mRoPE YaRN correction range',
+    'crewAIInc/crewAI': 'Fail an evaluation when an expected metric has no score instead of passing it',
+    'stanfordnlp/dspy': 'Reject the reserved `trajectory` output name in ReAct at construction time',
+    'microsoft/onnxruntime': 'Reconnect the producer edge when `DivMulFusion` substitutes the Mul\'s input',
 }
 
 DISPLAY_NAMES = {
@@ -50,7 +51,7 @@ DISPLAY_NAMES = {
 }
 
 # Fallback descriptions are cut to this many characters.
-MAX_IMPACT_CHARS = 50
+MAX_IMPACT_CHARS = 90
 
 STATE_COLORS = {'MERGED': '8957e5', 'OPEN': '238636'}
 
@@ -172,25 +173,68 @@ def impact_for(repo_name, prs):
             impact = impact[:MAX_IMPACT_CHARS - 1].rstrip() + '…'
     return inline_html(impact)
 
-def org_chips(repos, sort_key):
-    """One avatar chip per organization, linking to the pull requests made there."""
+# Bold Arial advance widths in 1/1000 em, to size each chip to its text.
+CHAR_WIDTHS = dict(zip(
+    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@-_.',
+    [556, 611, 556, 611, 556, 333, 611, 611, 278, 278, 556, 278, 889, 611, 611, 611, 611, 389, 556,
+     333, 611, 556, 778, 556, 556, 500, 722, 722, 722, 722, 667, 611, 778, 722, 278, 556, 722, 611,
+     833, 722, 778, 667, 778, 722, 667, 611, 722, 667, 944, 667, 667, 611] + [556] * 10 + [975, 333, 556, 278],
+))
+
+CHIP_SVG = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="32" viewBox="0 0 {width} 32">
+<style>
+.bg{{fill:#f6f8fa;stroke:#d0d7de}}.name{{fill:#1f2328}}
+@media (prefers-color-scheme: dark){{.bg{{fill:#161b22;stroke:#30363d}}.name{{fill:#e6edf3}}}}
+</style>
+<clipPath id="avatar"><rect x="8" y="6" width="20" height="20" rx="4"/></clipPath>
+<rect class="bg" x="0.5" y="0.5" width="{rect_width}" height="31" rx="6"/>
+<image x="8" y="6" width="20" height="20" clip-path="url(#avatar)" xlink:href="{avatar}"/>
+<text class="name" x="36" y="21" textLength="{text_width}" lengthAdjust="spacingAndGlyphs" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif" font-size="14" font-weight="600">{label}</text>
+</svg>
+"""
+
+def chip_svg(login, avatar_bytes, content_type):
+    label = f'@{login}'
+    text_width = round(sum(CHAR_WIDTHS.get(c, 611) for c in label) * 14 / 1000)
+    width = 36 + text_width + 12
+    avatar = f'data:{content_type};base64,{base64.b64encode(avatar_bytes).decode()}'
+    return CHIP_SVG.format(width=width, rect_width=width - 1, text_width=text_width,
+                           avatar=avatar, label=html.escape(label))
+
+def fetch_avatar(avatar_url):
+    separator = '&' if '?' in avatar_url else '?'
+    req = urllib.request.Request(f'{avatar_url}{separator}s=40', headers={'User-Agent': 'Profile-Readme-Updater'})
+    with urllib.request.urlopen(req) as resp:
+        return resp.read(), resp.headers.get_content_type()
+
+def org_chips(repos, sort_key, chip_dir):
+    """One chip image per organization, linking to the pull requests made there.
+
+    Each chip is a single image, so it never wraps between its avatar and its name, and it
+    is drawn from GitHub's own data rather than by a third-party badge service.
+    """
     owners = {}
     for repo_name, prs in sorted(repos.items(), key=sort_key):
         owner = prs[0]['repository']['owner']
         owners.setdefault(owner['login'], owner['avatarUrl'])
+
+    os.makedirs(chip_dir, exist_ok=True)
     chips = []
     for login, avatar_url in owners.items():
-        separator = '&' if '?' in avatar_url else '?'
-        # GitHub renders <kbd> as a bordered inline box, so a chip never wraps between its
-        # avatar and its name.
+        filename = f'{login.lower()}.svg'
+        with open(os.path.join(chip_dir, filename), 'w', encoding='utf-8') as f:
+            f.write(chip_svg(login, *fetch_avatar(avatar_url)))
         chips.append(
-            f'<a href="{search_url(f"user:{login}")}"><kbd>'
-            f'<img src="{avatar_url}{separator}s=40" width="16" height="16" align="center" alt=""/>'
-            f'&nbsp;@{html.escape(login)}</kbd></a>'
+            f'<a href="{search_url(f"user:{login}")}">'
+            f'<img src="{os.path.basename(chip_dir)}/{filename}" height="32" alt="@{html.escape(login)}"/></a>'
         )
+    # Drop the chips of organizations no longer listed.
+    keep = {f'{login.lower()}.svg' for login in owners}
+    for stale in set(os.listdir(chip_dir)) - keep:
+        os.remove(os.path.join(chip_dir, stale))
     return '<p align="center">\n' + '\n'.join(chips) + '\n</p>'
 
-def build_section(nodes):
+def build_section(nodes, chip_dir):
     repos = defaultdict(list)
     for pr in nodes:
         repo = pr.get('repository')
@@ -216,7 +260,7 @@ def build_section(nodes):
         f"in {len(owners)} organizations — fixes and features in ML infrastructure, compilers, agent "
         "frameworks, and evaluation tooling.",
         "",
-        org_chips(repos, sort_key),
+        org_chips(repos, sort_key, chip_dir),
         "",
     ]
 
@@ -226,7 +270,7 @@ def build_section(nodes):
         cards.append(
             f'<td width="50%"><b><a href="https://github.com/{repo_name}">{disp_name}</a></b>&nbsp; '
             f'{state_tags(repo_name, prs)}<br>'
-            f'<sub>★ {format_stars(stars(prs))} · {impact_for(repo_name, prs)}</sub></td>'
+            f'★ {format_stars(stars(prs))} · {impact_for(repo_name, prs)}</td>'
         )
 
     # Two cards per row. The table is one HTML block, so it must not contain a blank line.
@@ -263,11 +307,11 @@ def main():
     print("Fetching external PRs from GitHub...")
     nodes = fetch_prs(token)
     print(f"Found {len(nodes)} PRs across external repositories.")
-    section = build_section(nodes)
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(os.path.dirname(script_dir))
     readme_path = os.path.join(repo_root, 'README.md')
+    section = build_section(nodes, os.path.join(repo_root, 'orgs'))
 
     print(f"Updating {readme_path}...")
     changed = update_readme(section, readme_path)
