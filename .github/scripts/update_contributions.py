@@ -40,6 +40,7 @@ CURATED_IMPACTS = {
 
 DISPLAY_NAMES = {
     'NVIDIA/numba-cuda-mlir': 'numba-cuda-mlir',
+    'fivetran/great_expectations': 'Great Expectations',
     'microsoft/onnxruntime': 'ONNX Runtime',
     'microsoft/PyRIT': 'PyRIT',
     'stanfordnlp/dspy': 'DSPy',
@@ -56,6 +57,7 @@ MAX_IMPACT_CHARS = 90
 STATE_COLORS = {'MERGED': '8957e5', 'OPEN': '238636'}
 
 CARDS_PER_ROW = 2
+CHIPS_PER_ROW = 4
 
 def get_token():
     token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
@@ -134,8 +136,9 @@ def clean_pr_title(title):
     return cleaned
 
 def inline_html(text):
-    # The cards are raw HTML, where markdown isn't parsed: escape, then turn `code` into <code>.
-    return re.sub(r'`([^`]+)`', r'<code>\1</code>', html.escape(text))
+    # The cards are raw HTML, where markdown isn't parsed. Plain text reads cleaner than
+    # code spans in a card, so backticks are dropped.
+    return html.escape(text.replace('`', ''))
 
 def format_stars(stars):
     if stars >= 1000:
@@ -150,19 +153,23 @@ def badge_text(text):
 def state_tag(label, state, url):
     color = STATE_COLORS[state]
     src = f"https://img.shields.io/badge/{badge_text(label)}-{state.lower()}-{color}?style=flat-square"
-    return f'<a href="{url}"><img src="{src}" alt="{label} {state.lower()}"/></a>'
+    # align="right" floats the tag to the card's right edge, so tags line up down the grid.
+    return f'<a href="{url}"><img align="right" src="{src}" alt="{label} {state.lower()}"/></a>'
 
 def state_tags(repo_name, prs):
-    """One tag per state: the pull request itself, or a count that links to the list."""
+    """One tag per state: the pull request itself, or a count that links to the list.
+
+    Right floats stack from the edge inward, so the open tag comes first to end up rightmost.
+    """
     tags = []
-    for state in ('MERGED', 'OPEN'):
+    for state in ('OPEN', 'MERGED'):
         matching = [p for p in prs if p['state'] == state]
         if len(matching) == 1:
             tags.append(state_tag(f"#{matching[0]['number']}", state, matching[0]['url']))
         elif matching:
             qualifier = 'is:merged' if state == 'MERGED' else 'is:open'
             tags.append(state_tag(f"{len(matching)} PRs", state, search_url(f'{qualifier} repo:{repo_name}')))
-    return ' '.join(tags)
+    return ''.join(tags)
 
 def impact_for(repo_name, prs):
     impact = CURATED_IMPACTS.get(repo_name)
@@ -193,10 +200,12 @@ CHIP_SVG = """<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3
 </svg>
 """
 
-def chip_svg(login, avatar_bytes, content_type):
+def chip_text_width(login):
+    return round(sum(CHAR_WIDTHS.get(c, 611) for c in f'@{login}') * 14 / 1000)
+
+def chip_svg(login, avatar_bytes, content_type, width):
     label = f'@{login}'
-    text_width = round(sum(CHAR_WIDTHS.get(c, 611) for c in label) * 14 / 1000)
-    width = 36 + text_width + 12
+    text_width = chip_text_width(login)
     avatar = f'data:{content_type};base64,{base64.b64encode(avatar_bytes).decode()}'
     return CHIP_SVG.format(width=width, rect_width=width - 1, text_width=text_width,
                            avatar=avatar, label=html.escape(label))
@@ -218,12 +227,14 @@ def org_chips(repos, sort_key, chip_dir):
         owner = prs[0]['repository']['owner']
         owners.setdefault(owner['login'], owner['avatarUrl'])
 
+    # Every chip is as wide as the widest, so the rows form a grid with aligned columns.
+    width = 36 + max(chip_text_width(login) for login in owners) + 12
     os.makedirs(chip_dir, exist_ok=True)
     chips = []
     for login, avatar_url in owners.items():
         filename = f'{login.lower()}.svg'
         with open(os.path.join(chip_dir, filename), 'w', encoding='utf-8') as f:
-            f.write(chip_svg(login, *fetch_avatar(avatar_url)))
+            f.write(chip_svg(login, *fetch_avatar(avatar_url), width))
         chips.append(
             f'<a href="{search_url(f"user:{login}")}">'
             f'<img src="{os.path.basename(chip_dir)}/{filename}" height="32" alt="@{html.escape(login)}"/></a>'
@@ -232,7 +243,8 @@ def org_chips(repos, sort_key, chip_dir):
     keep = {f'{login.lower()}.svg' for login in owners}
     for stale in set(os.listdir(chip_dir)) - keep:
         os.remove(os.path.join(chip_dir, stale))
-    return '<p align="center">\n' + '\n'.join(chips) + '\n</p>'
+    rows = [' '.join(chips[i:i + CHIPS_PER_ROW]) for i in range(0, len(chips), CHIPS_PER_ROW)]
+    return '<br>'.join(rows)
 
 def build_section(nodes, chip_dir):
     repos = defaultdict(list)
@@ -260,31 +272,40 @@ def build_section(nodes, chip_dir):
         f"in {len(owners)} organizations — fixes and features in ML infrastructure, compilers, agent "
         "frameworks, and evaluation tooling.",
         "",
-        org_chips(repos, sort_key, chip_dir),
-        "",
     ]
 
     cards = []
     for repo_name, prs in sorted(repos.items(), key=sort_key):
         disp_name = html.escape(DISPLAY_NAMES.get(repo_name, repo_name.split('/')[1]))
         cards.append(
-            f'<td width="50%"><b><a href="https://github.com/{repo_name}">{disp_name}</a></b>&nbsp; '
-            f'{state_tags(repo_name, prs)}<br>'
+            f'<td width="50%" valign="top">{state_tags(repo_name, prs)}'
+            f'<b><a href="https://github.com/{repo_name}">{disp_name}</a></b><br>'
             f'★ {format_stars(stars(prs))} · {impact_for(repo_name, prs)}</td>'
         )
 
-    # Two cards per row. The table is one HTML block, so it must not contain a blank line.
-    lines.append("<table>")
-    for i in range(0, len(cards), CARDS_PER_ROW):
-        row = cards[i:i + CARDS_PER_ROW]
-        row += ['<td width="50%"></td>'] * (CARDS_PER_ROW - len(row))
-        lines += ["<tr>", *row, "</tr>"]
-    lines.append("</table>")
+    button = (
+        f'<a href="{search_url("is:merged")}"><img src="https://img.shields.io/badge/GitHub-All_{total_merged}'
+        '_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" '
+        'alt="All merged open source PRs" /></a>'
+    )
+    # An odd card count leaves one cell free; the button fills it instead of a blank cell.
+    if len(cards) % CARDS_PER_ROW:
+        cards.append(f'<td width="50%" align="center">{button}</td>')
+        button = None
 
+    # One bordered block: the organizations, then two cards per row. The table is one HTML
+    # block, so it must not contain a blank line.
     lines += [
-        "",
-        f'<p align="center"><a href="{search_url("is:merged")}"><img src="https://img.shields.io/badge/GitHub-All_{total_merged}_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></p>',
+        "<table>",
+        "<tr>",
+        f'<td colspan="{CARDS_PER_ROW}" align="center">{org_chips(repos, sort_key, chip_dir)}</td>',
+        "</tr>",
     ]
+    for i in range(0, len(cards), CARDS_PER_ROW):
+        lines += ["<tr>", *cards[i:i + CARDS_PER_ROW], "</tr>"]
+    if button:
+        lines += ["<tr>", f'<td colspan="{CARDS_PER_ROW}" align="center">{button}</td>', "</tr>"]
+    lines.append("</table>")
     return '\n'.join(lines)
 
 def update_readme(section, readme_path):

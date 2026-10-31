@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="32" viewBox="0 0 141 32">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="32" viewBox="0 0 160 32">
 <style>
 .bg{fill:#f6f8fa;stroke:#d0d7de}.name{fill:#1f2328}
 @media (prefers-color-scheme: dark){.bg{fill:#161b22;stroke:#30363d}.name{fill:#e6edf3}}
 </style>
 <clipPath id="avatar"><rect x="8" y="6" width="20" height="20" rx="4"/></clipPath>
-<rect class="bg" x="0.5" y="0.5" width="140" height="31" rx="6"/>
+<rect class="bg" x="0.5" y="0.5" width="159" height="31" rx="6"/>
 <image x="8" y="6" width="20" height="20" clip-path="url(#avatar)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAACjUlEQVR4nOyYy27TTBTHT+yknjhpnDafv7Rc0tCYy4o9Sx6h8ALAC/AIvAK8BRuEukBiUSGxYgUCcXEaUAsqapqmVG3JzXY9gxx02qSZ8Y1ECCl/b87flvPTOWdmjpUkYwz+hiQMpuApOBa4bcGT1/TFhxbeOFUSgzHLcmDNpM8/sq7D7t84Asjik4mBj114WaPP3rOjnufzirM4N4MPJwOmFF5t0NV3bL+NtwBKuU4mk0E3AfCbb/TpW1Y/RI9anrPS6QK6sYJbFjxaczd/oB8Su7aQwNgX3P36uLe1io6njDF7/UEyefrip20moIKuWgWNoPMFzyzcbJsPgdp446wcO6HY9iDYrFMMz6qc66hqDp3vPpZJkZRW0IVStYHRiCoFR1EUdL5gAEhX7oLE2QDca68FzZ9ohiUl6JUi5/eFYJn8T0q30AXIp87nsz1tNo0uBDhS0usN4Tgvax1VVdGFA8tEJxdDddqsYzQiQ3dTqRS6cGAvaeNOYNLbB3DYRTMsRXYruowuCri/vAM6Xd0RNrh/UqpxwF7SlYCkzbqwwUtaT1Xjgv2Xt0thXbyDrxapLMcqdWDSW/vQEZxv2ZRzYV64rEKBvaQFy9sUN3hJ6/rXORjsddrg72mfBl/Kd7kzOBqY22nHhS+7aEKPwmhgbqc3m2C7aIZVILaucSoUB9xPeiV0g/nfOnHAo6d3dUfY4OV5mxD+8I8DHlzelsM29vDBsBLhGhwB7CVt3PuddG2XuYJKL2Z7efEojAk+GVlV8UQSfcz+Efgk6VpTWMzL/x37jML4YJnocO52o83/jEpJ1Cj6nc+DSkT9R8By6OfvB9Tl7GJZYuViJmSpI4PHdUlxXpqC/ynwrwEAl9/IJXYZqyEAAAAASUVORK5CYII="/>
 <text class="name" x="36" y="21" textLength="93" lengthAdjust="spacingAndGlyphs" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif" font-size="14" font-weight="600">@vllm-project</text>
 </svg>
