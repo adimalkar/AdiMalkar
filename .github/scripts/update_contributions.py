@@ -2,12 +2,13 @@
 """
 Automated Open Source Contributions updater for Aditya Malkar's Profile README.
 Fetches public pull requests across external repositories and rewrites the section
-between the contributions comment tags: a summary line, a table of merged work, and a
-collapsed list of pull requests still in review.
+between the contributions comment tags: a summary line and a grid with one card per
+project, showing merged and open tags for its pull requests.
 """
 
 import os
 import re
+import html
 import json
 import urllib.parse
 import urllib.request
@@ -18,40 +19,42 @@ USER = 'adimalkar'
 # Pull requests outside these owners count as open source contributions.
 EXCLUDED_OWNERS = ('adimalkar', 'hiringfleet')
 
-# One line per repository on what the merged work did. Repositories without an entry fall
-# back to the title of their latest merged pull request.
+# One short line per repository, kept to about 50 characters so it fits on one line of its
+# card. Repositories without an entry fall back to the title of their latest pull request.
 CURATED_IMPACTS = {
-    'NVIDIA/numba-cuda-mlir': 'Fixed float-to-bool conversion in the MLIR lowering by comparing against zero instead of truncating.',
-    'kornia/kornia': 'Revived LoFTR CPU accuracy tests; fixed PatchMix bounding boxes, `same_on_batch` pairing and input-rank errors across augmentations.',
-    'Arize-ai/phoenix': 'Fixed playground/evaluator clients silently dropping Anthropic & Bedrock tool-`choice` and `strict` configurations prior to dispatch.',
-    'fivetran/great_expectations': 'Resolved 36 mypy errors across 8 excluded integration test modules; serialized infinite `Decimal`s instead of raising.',
-    'sqlfluff/sqlfluff': 'Added full AST grammar for Snowflake `CREATE/ALTER/DROP ALERT` DDL; fixed reflow alignment for leading-comma T-SQL.',
-    'microsoft/onnxruntime': 'Reconnected producer edge in the graph optimizer when `DivMulFusion` substitutes Mul\'s input.',
-    'microsoft/PyRIT': 'Let the PUZZLED keyword masker select words with non-ASCII letters.',
-    'stanfordnlp/dspy': 'Rejects reserved `trajectory` as an output field in ReAct — surfaces collision at construction instead of mid-run after billed LM calls.',
-    'crewAIInc/crewAI': 'Explicitly fails when expected evaluation metric has no score instead of silently propagating corrupted agent benchmark results.',
-    'mlc-ai/xgrammar': 'Resolved JSON Schema references through array indices for grammar-guided LLM structured output generation.'
+    'kornia/kornia': 'Augmentation fixes; revived LoFTR CPU tests',
+    'fivetran/great_expectations': 'Infinite `Decimal` serialization; typed test modules',
+    'sqlfluff/sqlfluff': 'Snowflake `ALERT` grammar; T-SQL reflow alignment',
+    'Arize-ai/phoenix': 'Kept Anthropic/Bedrock tool choice and `strict`',
+    'microsoft/PyRIT': 'Non-ASCII words in the PUZZLED keyword masker',
+    'mlc-ai/xgrammar': 'JSON Schema references through array indices',
+    'NVIDIA/numba-cuda-mlir': 'Float-to-bool conversion in the MLIR lowering',
+    'NousResearch/hermes-agent': 'Show saved working directories in session lists',
+    'browser-use/browser-use': 'Accept optional types on special action params',
+    'vllm-project/vllm': 'Original context length for mRoPE YaRN correction',
+    'crewAIInc/crewAI': 'Fail when an expected metric has no score',
+    'stanfordnlp/dspy': 'Reject the reserved `trajectory` output in ReAct',
+    'microsoft/onnxruntime': 'Keep the producer edge in `DivMulFusion`',
 }
 
 DISPLAY_NAMES = {
-    'NVIDIA/numba-cuda-mlir': 'NVIDIA numba-cuda-mlir',
-    'microsoft/onnxruntime': 'Microsoft ONNX Runtime',
-    'microsoft/PyRIT': 'Microsoft PyRIT',
-    'stanfordnlp/dspy': 'Stanford DSPy',
+    'NVIDIA/numba-cuda-mlir': 'numba-cuda-mlir',
+    'microsoft/onnxruntime': 'ONNX Runtime',
+    'microsoft/PyRIT': 'PyRIT',
+    'stanfordnlp/dspy': 'DSPy',
     'Arize-ai/phoenix': 'Arize Phoenix',
-    'fivetran/great_expectations': 'great_expectations',
-    'kornia/kornia': 'kornia',
-    'sqlfluff/sqlfluff': 'sqlfluff',
     'crewAIInc/crewAI': 'CrewAI',
-    'mlc-ai/xgrammar': 'MLC-AI xgrammar',
+    'mlc-ai/xgrammar': 'xgrammar',
     'langchain-ai/langchainjs': 'LangChain.js',
     'vllm-project/vllm': 'vLLM',
-    'NousResearch/hermes-agent': 'hermes-agent',
-    'browser-use/browser-use': 'browser-use'
 }
 
-# A repository with more merged pull requests than this links to the list instead.
-MAX_LISTED_PRS = 2
+# Fallback descriptions are cut to this many characters.
+MAX_IMPACT_CHARS = 50
+
+STATE_COLORS = {'MERGED': '8957e5', 'OPEN': '238636'}
+
+CARDS_PER_ROW = 2
 
 def get_token():
     token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
@@ -125,9 +128,9 @@ def clean_pr_title(title):
         cleaned = cleaned[0].upper() + cleaned[1:]
     return cleaned
 
-def table_cell(text):
-    # A bare `|` ends a markdown table cell, and `*` (as in `2**63`) can start emphasis.
-    return text.replace('|', '\\|').replace('*', '\\*')
+def inline_html(text):
+    # The cards are raw HTML, where markdown isn't parsed: escape, then turn `code` into <code>.
+    return re.sub(r'`([^`]+)`', r'<code>\1</code>', html.escape(text))
 
 def format_stars(stars):
     if stars >= 1000:
@@ -135,12 +138,35 @@ def format_stars(stars):
         return f"{thousands:.0f}k" if thousands >= 100 else f"{thousands:.1f}k".replace('.0k', 'k')
     return str(stars)
 
-def pr_link(pr):
-    return f"[#{pr['number']}]({pr['url']})"
+def badge_text(text):
+    # shields.io static badges read `-` and `_` as separators.
+    return urllib.parse.quote(text.replace('-', '--').replace('_', '__'))
 
-def repo_link(repo_name):
-    disp_name = DISPLAY_NAMES.get(repo_name, repo_name.split('/')[1])
-    return f"**[{disp_name}](https://github.com/{repo_name})**"
+def state_tag(label, state, url):
+    color = STATE_COLORS[state]
+    src = f"https://img.shields.io/badge/{badge_text(label)}-{state.lower()}-{color}?style=flat-square"
+    return f'<a href="{url}"><img src="{src}" alt="{label} {state.lower()}"/></a>'
+
+def state_tags(repo_name, prs):
+    """One tag per state: the pull request itself, or a count that links to the list."""
+    tags = []
+    for state in ('MERGED', 'OPEN'):
+        matching = [p for p in prs if p['state'] == state]
+        if len(matching) == 1:
+            tags.append(state_tag(f"#{matching[0]['number']}", state, matching[0]['url']))
+        elif matching:
+            qualifier = 'is:merged' if state == 'MERGED' else 'is:open'
+            tags.append(state_tag(f"{len(matching)} PRs", state, search_url(f'{qualifier} repo:{repo_name}')))
+    return ' '.join(tags)
+
+def impact_for(repo_name, prs):
+    impact = CURATED_IMPACTS.get(repo_name)
+    if not impact:
+        latest = max(prs, key=lambda p: p['createdAt'])
+        impact = clean_pr_title(latest['title'])
+        if len(impact) > MAX_IMPACT_CHARS:
+            impact = impact[:MAX_IMPACT_CHARS - 1].rstrip() + '…'
+    return inline_html(impact)
 
 def build_section(nodes):
     repos = defaultdict(list)
@@ -149,57 +175,42 @@ def build_section(nodes):
         if repo and not repo.get('isPrivate') and pr['state'] in ('OPEN', 'MERGED'):
             repos[repo['nameWithOwner']].append(pr)
 
-    merged = {name: [p for p in prs if p['state'] == 'MERGED'] for name, prs in repos.items()}
-    merged = {name: sorted(prs, key=lambda p: p['mergedAt'], reverse=True) for name, prs in merged.items() if prs}
-    in_review = [p for prs in repos.values() for p in prs if p['state'] == 'OPEN']
-    stars = {name: prs[0]['repository']['stargazerCount'] for name, prs in repos.items()}
+    def merged_count(prs):
+        return sum(p['state'] == 'MERGED' for p in prs)
 
-    merged_count = sum(len(prs) for prs in merged.values())
+    def stars(prs):
+        return prs[0]['repository']['stargazerCount']
+
+    total_merged = sum(merged_count(prs) for prs in repos.values())
+    total_open = sum(len(prs) for prs in repos.values()) - total_merged
     lines = [
-        f"**{merged_count} merged pull requests in {len(merged)} projects**, plus {len(in_review)} in review — "
+        f"**{total_merged} merged** and **{total_open} open** pull requests across {len(repos)} projects — "
         "fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.",
         "",
-        "| Project | Stars | Merged | What I fixed |",
-        "|:--------|------:|:-------|:-------------|",
     ]
 
-    # Most merged pull requests first, then the larger project.
-    for repo_name, prs in sorted(merged.items(), key=lambda item: (-len(item[1]), -stars[item[0]])):
-        if len(prs) > MAX_LISTED_PRS:
-            listed = f"[{len(prs)} PRs]({search_url(f'is:merged repo:{repo_name}')})"
-        else:
-            listed = ' · '.join(pr_link(p) for p in prs)
-        impact = CURATED_IMPACTS.get(repo_name) or clean_pr_title(prs[0]['title'])
-        lines.append(f"| {repo_link(repo_name)} | {format_stars(stars[repo_name])} | {listed} | {table_cell(impact)} |")
+    # Projects with merged work first, most merged first; then the larger project. A pull
+    # request that merges moves its project up on the next run.
+    cards = []
+    for repo_name, prs in sorted(repos.items(), key=lambda item: (-merged_count(item[1]), -stars(item[1]))):
+        disp_name = html.escape(DISPLAY_NAMES.get(repo_name, repo_name.split('/')[1]))
+        cards.append(
+            f'<td width="50%"><b><a href="https://github.com/{repo_name}">{disp_name}</a></b>&nbsp; '
+            f'{state_tags(repo_name, prs)}<br>'
+            f'<sub>★ {format_stars(stars(prs))} · {impact_for(repo_name, prs)}</sub></td>'
+        )
 
-    if in_review:
-        # Larger projects first; summarize the first few by name.
-        in_review.sort(key=lambda p: (-p['repository']['stargazerCount'], -p['number']))
-        names = []
-        for p in in_review:
-            name = DISPLAY_NAMES.get(p['repository']['nameWithOwner'], p['repository']['nameWithOwner'].split('/')[1])
-            if name not in names:
-                names.append(name)
-        preview = ', '.join(names[:4]) + (', …' if len(names) > 4 else '')
-        lines += [
-            "",
-            "<details>",
-            f"<summary><b>In review ({len(in_review)})</b>: {preview}</summary>",
-            "",
-            "| Project | Stars | Pull request |",
-            "|:--------|------:|:-------------|",
-        ]
-        for p in in_review:
-            repo_name = p['repository']['nameWithOwner']
-            lines.append(
-                f"| {repo_link(repo_name)} | {format_stars(stars[repo_name])} | "
-                f"{pr_link(p)} {table_cell(clean_pr_title(p['title']))} |"
-            )
-        lines += ["", "</details>"]
+    # Two cards per row. The table is one HTML block, so it must not contain a blank line.
+    lines.append("<table>")
+    for i in range(0, len(cards), CARDS_PER_ROW):
+        row = cards[i:i + CARDS_PER_ROW]
+        row += ['<td width="50%"></td>'] * (CARDS_PER_ROW - len(row))
+        lines += ["<tr>", *row, "</tr>"]
+    lines.append("</table>")
 
     lines += [
         "",
-        f'<p align="center"><a href="{search_url("is:merged")}"><img src="https://img.shields.io/badge/GitHub-All_{merged_count}_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></p>',
+        f'<p align="center"><a href="{search_url("is:merged")}"><img src="https://img.shields.io/badge/GitHub-All_{total_merged}_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></p>',
     ]
     return '\n'.join(lines)
 

@@ -39,38 +39,38 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**18 merged pull requests in 7 projects**, plus 13 in review — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**18 merged** and **13 open** pull requests across 13 projects — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
 
-| Project | Stars | Merged | What I fixed |
-|:--------|------:|:-------|:-------------|
-| **[kornia](https://github.com/kornia/kornia)** | 11.5k | [10 PRs](https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia) | Revived LoFTR CPU accuracy tests; fixed PatchMix bounding boxes, `same_on_batch` pairing and input-rank errors across augmentations. |
-| **[great_expectations](https://github.com/fivetran/great_expectations)** | 11.9k | [#12254](https://github.com/fivetran/great_expectations/pull/12254) · [#12173](https://github.com/fivetran/great_expectations/pull/12173) | Resolved 36 mypy errors across 8 excluded integration test modules; serialized infinite `Decimal`s instead of raising. |
-| **[sqlfluff](https://github.com/sqlfluff/sqlfluff)** | 10k | [#8420](https://github.com/sqlfluff/sqlfluff/pull/8420) · [#8411](https://github.com/sqlfluff/sqlfluff/pull/8411) | Added full AST grammar for Snowflake `CREATE/ALTER/DROP ALERT` DDL; fixed reflow alignment for leading-comma T-SQL. |
-| **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** | 12.1k | [#15683](https://github.com/Arize-ai/phoenix/pull/15683) | Fixed playground/evaluator clients silently dropping Anthropic & Bedrock tool-`choice` and `strict` configurations prior to dispatch. |
-| **[Microsoft PyRIT](https://github.com/microsoft/PyRIT)** | 4.7k | [#3051](https://github.com/microsoft/PyRIT/pull/3051) | Let the PUZZLED keyword masker select words with non-ASCII letters. |
-| **[MLC-AI xgrammar](https://github.com/mlc-ai/xgrammar)** | 2k | [#929](https://github.com/mlc-ai/xgrammar/pull/929) | Resolved JSON Schema references through array indices for grammar-guided LLM structured output generation. |
-| **[NVIDIA numba-cuda-mlir](https://github.com/NVIDIA/numba-cuda-mlir)** | 74 | [#307](https://github.com/NVIDIA/numba-cuda-mlir/pull/307) | Fixed float-to-bool conversion in the MLIR lowering by comparing against zero instead of truncating. |
-
-<details>
-<summary><b>In review (13)</b>: hermes-agent, browser-use, vLLM, CrewAI, …</summary>
-
-| Project | Stars | Pull request |
-|:--------|------:|:-------------|
-| **[hermes-agent](https://github.com/NousResearch/hermes-agent)** | 259k | [#132669](https://github.com/NousResearch/hermes-agent/pull/132669) Show saved working directories in session lists |
-| **[browser-use](https://github.com/browser-use/browser-use)** | 120k | [#6023](https://github.com/browser-use/browser-use/pull/6023) Accept X \| None annotations on special action params |
-| **[vLLM](https://github.com/vllm-project/vllm)** | 96k | [#58879](https://github.com/vllm-project/vllm/pull/58879) Use original context length for mRoPE YaRN correction range |
-| **[CrewAI](https://github.com/crewAIInc/crewAI)** | 60.4k | [#7742](https://github.com/crewAIInc/crewAI/pull/7742) Fail when expected metric has no score |
-| **[Stanford DSPy](https://github.com/stanfordnlp/dspy)** | 38.9k | [#10275](https://github.com/stanfordnlp/dspy/pull/10275) Reject reserved `trajectory` output name in ReAct (follow-up to #9852) |
-| **[Microsoft ONNX Runtime](https://github.com/microsoft/onnxruntime)** | 22.2k | [#32703](https://github.com/microsoft/onnxruntime/pull/32703) Reconnect the producer edge when DivMulFusion substitutes the Mul's input |
-| **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** | 12.1k | [#16118](https://github.com/Arize-ai/phoenix/pull/16118) Expose per-span cost scalars in trace and session filters |
-| **[great_expectations](https://github.com/fivetran/great_expectations)** | 11.9k | [#12255](https://github.com/fivetran/great_expectations/pull/12255) Count rows with NULLs as unexpected on SQL in four pair and multicolumn Expectations |
-| **[MLC-AI xgrammar](https://github.com/mlc-ai/xgrammar)** | 2k | [#1008](https://github.com/mlc-ai/xgrammar/pull/1008) Ignore a string pattern whose regex syntax is not supported |
-| **[MLC-AI xgrammar](https://github.com/mlc-ai/xgrammar)** | 2k | [#969](https://github.com/mlc-ai/xgrammar/pull/969) Warn when a string schema uses a format that is not built in |
-| **[NVIDIA numba-cuda-mlir](https://github.com/NVIDIA/numba-cuda-mlir)** | 74 | [#421](https://github.com/NVIDIA/numba-cuda-mlir/pull/421) Lower NumPy scalars read through module attributes |
-| **[NVIDIA numba-cuda-mlir](https://github.com/NVIDIA/numba-cuda-mlir)** | 74 | [#420](https://github.com/NVIDIA/numba-cuda-mlir/pull/420) Lower cuda.lanemask_lt() by reading the %lanemask_lt special register |
-| **[NVIDIA numba-cuda-mlir](https://github.com/NVIDIA/numba-cuda-mlir)** | 74 | [#374](https://github.com/NVIDIA/numba-cuda-mlir/pull/374) Lower integer constants of 2\*\*63 or more as their two's complement |
-
-</details>
+<table>
+<tr>
+<td width="50%"><b><a href="https://github.com/kornia/kornia">kornia</a></b>&nbsp; <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia"><img src="https://img.shields.io/badge/10%20PRs-merged-8957e5?style=flat-square" alt="10 PRs merged"/></a><br><sub>★ 11.5k · Augmentation fixes; revived LoFTR CPU tests</sub></td>
+<td width="50%"><b><a href="https://github.com/fivetran/great_expectations">great_expectations</a></b>&nbsp; <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Afivetran%2Fgreat_expectations"><img src="https://img.shields.io/badge/2%20PRs-merged-8957e5?style=flat-square" alt="2 PRs merged"/></a> <a href="https://github.com/fivetran/great_expectations/pull/12255"><img src="https://img.shields.io/badge/%2312255-open-238636?style=flat-square" alt="#12255 open"/></a><br><sub>★ 11.9k · Infinite <code>Decimal</code> serialization; typed test modules</sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/sqlfluff/sqlfluff">sqlfluff</a></b>&nbsp; <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Asqlfluff%2Fsqlfluff"><img src="https://img.shields.io/badge/2%20PRs-merged-8957e5?style=flat-square" alt="2 PRs merged"/></a><br><sub>★ 10k · Snowflake <code>ALERT</code> grammar; T-SQL reflow alignment</sub></td>
+<td width="50%"><b><a href="https://github.com/Arize-ai/phoenix">Arize Phoenix</a></b>&nbsp; <a href="https://github.com/Arize-ai/phoenix/pull/15683"><img src="https://img.shields.io/badge/%2315683-merged-8957e5?style=flat-square" alt="#15683 merged"/></a> <a href="https://github.com/Arize-ai/phoenix/pull/16118"><img src="https://img.shields.io/badge/%2316118-open-238636?style=flat-square" alt="#16118 open"/></a><br><sub>★ 12.1k · Kept Anthropic/Bedrock tool choice and <code>strict</code></sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b>&nbsp; <a href="https://github.com/microsoft/PyRIT/pull/3051"><img src="https://img.shields.io/badge/%233051-merged-8957e5?style=flat-square" alt="#3051 merged"/></a><br><sub>★ 4.7k · Non-ASCII words in the PUZZLED keyword masker</sub></td>
+<td width="50%"><b><a href="https://github.com/mlc-ai/xgrammar">xgrammar</a></b>&nbsp; <a href="https://github.com/mlc-ai/xgrammar/pull/929"><img src="https://img.shields.io/badge/%23929-merged-8957e5?style=flat-square" alt="#929 merged"/></a> <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amlc-ai%2Fxgrammar"><img src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><br><sub>★ 2k · JSON Schema references through array indices</sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/NVIDIA/numba-cuda-mlir">numba-cuda-mlir</a></b>&nbsp; <a href="https://github.com/NVIDIA/numba-cuda-mlir/pull/307"><img src="https://img.shields.io/badge/%23307-merged-8957e5?style=flat-square" alt="#307 merged"/></a> <a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3ANVIDIA%2Fnumba-cuda-mlir"><img src="https://img.shields.io/badge/3%20PRs-open-238636?style=flat-square" alt="3 PRs open"/></a><br><sub>★ 74 · Float-to-bool conversion in the MLIR lowering</sub></td>
+<td width="50%"><b><a href="https://github.com/NousResearch/hermes-agent">hermes-agent</a></b>&nbsp; <a href="https://github.com/NousResearch/hermes-agent/pull/132669"><img src="https://img.shields.io/badge/%23132669-open-238636?style=flat-square" alt="#132669 open"/></a><br><sub>★ 259k · Show saved working directories in session lists</sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b>&nbsp; <a href="https://github.com/browser-use/browser-use/pull/6023"><img src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><br><sub>★ 120k · Accept optional types on special action params</sub></td>
+<td width="50%"><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b>&nbsp; <a href="https://github.com/vllm-project/vllm/pull/58879"><img src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><br><sub>★ 96k · Original context length for mRoPE YaRN correction</sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b>&nbsp; <a href="https://github.com/crewAIInc/crewAI/pull/7742"><img src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><br><sub>★ 60.4k · Fail when an expected metric has no score</sub></td>
+<td width="50%"><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b>&nbsp; <a href="https://github.com/stanfordnlp/dspy/pull/10275"><img src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><br><sub>★ 38.9k · Reject the reserved <code>trajectory</code> output in ReAct</sub></td>
+</tr>
+<tr>
+<td width="50%"><b><a href="https://github.com/microsoft/onnxruntime">ONNX Runtime</a></b>&nbsp; <a href="https://github.com/microsoft/onnxruntime/pull/32703"><img src="https://img.shields.io/badge/%2332703-open-238636?style=flat-square" alt="#32703 open"/></a><br><sub>★ 22.2k · Keep the producer edge in <code>DivMulFusion</code></sub></td>
+<td width="50%"></td>
+</tr>
+</table>
 
 <p align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_18_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></p>
 <!-- END_SECTION:contributions -->
