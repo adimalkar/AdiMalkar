@@ -2,8 +2,8 @@
 """
 Automated Open Source Contributions updater for Aditya Malkar's Profile README.
 Fetches public pull requests across external repositories and rewrites the section
-between the contributions comment tags: a summary line and a grid with one card per
-project, showing merged and open tags for its pull requests.
+between the contributions comment tags: a summary line, the organizations contributed to,
+and a grid with one card per project, showing merged and open tags for its pull requests.
 """
 
 import os
@@ -88,6 +88,10 @@ def fetch_prs(token):
               nameWithOwner
               stargazerCount
               isPrivate
+              owner {
+                login
+                avatarUrl
+              }
             }
           }
         }
@@ -168,6 +172,24 @@ def impact_for(repo_name, prs):
             impact = impact[:MAX_IMPACT_CHARS - 1].rstrip() + '…'
     return inline_html(impact)
 
+def org_chips(repos, sort_key):
+    """One avatar chip per organization, linking to the pull requests made there."""
+    owners = {}
+    for repo_name, prs in sorted(repos.items(), key=sort_key):
+        owner = prs[0]['repository']['owner']
+        owners.setdefault(owner['login'], owner['avatarUrl'])
+    chips = []
+    for login, avatar_url in owners.items():
+        separator = '&' if '?' in avatar_url else '?'
+        # GitHub renders <kbd> as a bordered inline box, so a chip never wraps between its
+        # avatar and its name.
+        chips.append(
+            f'<a href="{search_url(f"user:{login}")}"><kbd>'
+            f'<img src="{avatar_url}{separator}s=40" width="16" height="16" align="center" alt=""/>'
+            f'&nbsp;@{html.escape(login)}</kbd></a>'
+        )
+    return '<p align="center">\n' + '\n'.join(chips) + '\n</p>'
+
 def build_section(nodes):
     repos = defaultdict(list)
     for pr in nodes:
@@ -181,18 +203,25 @@ def build_section(nodes):
     def stars(prs):
         return prs[0]['repository']['stargazerCount']
 
+    # Projects with merged work first, most merged first; then the larger project. A pull
+    # request that merges moves its project up on the next run.
+    def sort_key(item):
+        return (-merged_count(item[1]), -stars(item[1]))
+
     total_merged = sum(merged_count(prs) for prs in repos.values())
     total_open = sum(len(prs) for prs in repos.values()) - total_merged
+    owners = {prs[0]['repository']['owner']['login'] for prs in repos.values()}
     lines = [
-        f"**{total_merged} merged** and **{total_open} open** pull requests across {len(repos)} projects — "
-        "fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.",
+        f"**{total_merged} merged** and **{total_open} open** pull requests across {len(repos)} projects "
+        f"in {len(owners)} organizations — fixes and features in ML infrastructure, compilers, agent "
+        "frameworks, and evaluation tooling.",
+        "",
+        org_chips(repos, sort_key),
         "",
     ]
 
-    # Projects with merged work first, most merged first; then the larger project. A pull
-    # request that merges moves its project up on the next run.
     cards = []
-    for repo_name, prs in sorted(repos.items(), key=lambda item: (-merged_count(item[1]), -stars(item[1]))):
+    for repo_name, prs in sorted(repos.items(), key=sort_key):
         disp_name = html.escape(DISPLAY_NAMES.get(repo_name, repo_name.split('/')[1]))
         cards.append(
             f'<td width="50%"><b><a href="https://github.com/{repo_name}">{disp_name}</a></b>&nbsp; '

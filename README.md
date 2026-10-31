@@ -39,7 +39,22 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**18 merged** and **13 open** pull requests across 13 projects — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**18 merged** and **13 open** pull requests across 13 projects in 12 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+
+<p align="center">
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Akornia"><kbd><img src="https://avatars.githubusercontent.com/u/56968752?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@kornia</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Afivetran"><kbd><img src="https://avatars.githubusercontent.com/u/2722259?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@fivetran</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Asqlfluff"><kbd><img src="https://avatars.githubusercontent.com/u/71874918?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@sqlfluff</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3AArize-ai"><kbd><img src="https://avatars.githubusercontent.com/u/59858760?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@Arize-ai</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Amicrosoft"><kbd><img src="https://avatars.githubusercontent.com/u/6154722?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@microsoft</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Amlc-ai"><kbd><img src="https://avatars.githubusercontent.com/u/106173866?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@mlc-ai</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3ANVIDIA"><kbd><img src="https://avatars.githubusercontent.com/u/1728152?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@NVIDIA</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3ANousResearch"><kbd><img src="https://avatars.githubusercontent.com/u/134168893?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@NousResearch</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Abrowser-use"><kbd><img src="https://avatars.githubusercontent.com/u/192012301?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@browser-use</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Avllm-project"><kbd><img src="https://avatars.githubusercontent.com/u/136984999?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@vllm-project</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3AcrewAIInc"><kbd><img src="https://avatars.githubusercontent.com/u/170677839?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@crewAIInc</kbd></a>
+<a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+user%3Astanfordnlp"><kbd><img src="https://avatars.githubusercontent.com/u/3046006?v=4&s=40" width="16" height="16" align="center" alt=""/>&nbsp;@stanfordnlp</kbd></a>
+</p>
 
 <table>
 <tr>
