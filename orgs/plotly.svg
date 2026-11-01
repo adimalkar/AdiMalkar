@@ -1,0 +1,11 @@
+<!-- avatar=https://avatars.githubusercontent.com/u/5997976?v=4 width=160 template=42b3fd4d37d1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="32" viewBox="0 0 160 32">
+<style>
+.bg{fill:#f6f8fa;stroke:#d0d7de}.name{fill:#1f2328}
+@media (prefers-color-scheme: dark){.bg{fill:#161b22;stroke:#30363d}.name{fill:#e6edf3}}
+</style>
+<clipPath id="avatar"><rect x="8" y="6" width="20" height="20" rx="4"/></clipPath>
+<rect class="bg" x="0.5" y="0.5" width="159" height="31" rx="6"/>
+<image x="8" y="6" width="20" height="20" clip-path="url(#avatar)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAADjklEQVR4nOyWbWgbdRzHv/eQ9u5KbU1b+5A0JETbabM5lKooq2MOWtzAFZlBrXQ+ZFHxlSD60gfYmFNGB8pQhMEQfLUheyNidZng1tA5puvWtaa5tGmWNEu1S9OayyWVO/pzWaGxTQgNLt9f4L7/z+9+8OX+d+TPDw4OdvXve+VkfH6+DqWlTN+LL3zGdDi2jAWnp+8jWmpiau6uW6JFKYolUw5YDlgOWGBAhswKMWDWP8XkmllnwAZOwNnWPbi26WU8XXsvYb362p/Ej88fwsc9b4FjOcIw1tTj0Ltf4Ojhk+hwPEpYrx2vvo33fhpH76fHwbBs4QF3Ca3YZKhBFWuAq3ErYb1eausCz3J42NSO+xtthPH4g9vQVN8MUazC9h29hMFyPJ5wusDyPOzbu1Hf1kGt/AMOKVEsLqU1C8/NScJ6eaM+7YLYwhzkWIgwrk5cRkpN6X70ygXCyKRV+C+e1/3N0BT+CvioVdg/SSMvoY4XceXvGCG9WIZBu7EVU/Eo5pVFwnoZaxsgSlWYDsmE/n2KTe0O3JDHoSwkCBcWcCPFrvG+DRMniNL7tFhNz1bbsfMuK64l/0Ry+X3UfhaLBW+87gbP85ADAcJ6bevciQc6OhEM+aEuv4/az263w73fhXQ6jWAwSDj/Le4WzTjR/BRSQiW+XZzEm/7vqIWfPWewebMDqqqi85HH4Jfl5a+4C+6+d6CIlTgz9D2+PvEJjeDyb5dgNpugKAq2bH0I4XCYWvltcTVjIItqrpKsXjabVbvoT9BiaSUMUZDIQhCzvCDo4TRfUVEBk6mFWquKJ7OaTi3IaJszwqTU4nB0mHBOeYZ/QMM9JlQZ63Hq9HHCeek/A6axhAOxCytxzlLTKr45/RUt/99f8ZoCMgwDg8GwEucsbUZ7N4sesKWlBb8OezEV8MPpfI5wTlmtVvx+6SIm5Qns3r2LcHEC9vR0w2azQRAEuF2vEc6p3j3PwGw2Q5Ik7OvvJ1ycgNnbtNZtvm0myxcl4EZXOWA5YMkHnJmZIYvr128/eUQiEbKIRG7dFw7f4uGse5LJJGZnZ3WfyWQQjd6gVv7nwbGxcSQSCfzh8+GDDz9CPB6nFs4PecFxHD4/dgwez1nCGBkZQSqVwtXRURw4eFCfp94v585pFxwZGIDX6yWc/3mw5Le4HLAc8I4P2NzUNEGLUhR7dODIfkmS5giUkpx79375zwBdOwq6XBVhuwAAAABJRU5ErkJggg=="/>
+<text class="name" x="36" y="21" textLength="51" lengthAdjust="spacingAndGlyphs" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif" font-size="14" font-weight="600">@plotly</text>
+</svg>
