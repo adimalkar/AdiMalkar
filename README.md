@@ -33,6 +33,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 | **[Multimodal Fraud Detector](https://github.com/adimalkar/multimodal-fraud-detector)** · [*live demo*](https://frontend-adimalkars-projects.vercel.app) | Multi-agent AI pipeline detecting generative-AI fraud in insurance claims across images, PDFs, and video. Employs a "Jury System" of Qwen-VL forensic vision analysis paired with DeepSeek-R1 / Qwen / GLM critic agents with majority voting. |
 | **[QuantServe](https://github.com/adimalkar/quantserve)** | Hardware-aware LLM deployment optimizer & inference systems engine — surrogate latency/VRAM models predicting TTFT and TPOT, custom Triton fused W4A16 dequant kernels, and automated Docker / Kubernetes manifest export. |
 | **[Supplier Intelligence Platform](https://github.com/adimalkar/supplier-intelligence-platform)** | Real-time supplier intelligence & quality monitoring engine — agentic AI root-cause analysis, edge computer vision defect detection (YOLOv8), and distributed Kafka/Airflow data streaming pipelines. |
+| **[ReproGate](https://github.com/adimalkar/mcp-repro-gate)** | Action-contract layer for MCP tool execution — binds every approval to the exact tool, schema, arguments, and workspace state with one-use capability tokens, and emits signed execution receipts anyone can verify, so a changed action can never reuse an old approval. |
 
 <br>
 
