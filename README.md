@@ -64,10 +64,10 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 120k · Accept X | None annotations on special action parameters</td>
-<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 96.5k · Use the original context length for the mRoPE YaRN correction range</td>
+<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 96.6k · Use the original context length for the mRoPE YaRN correction range</td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="https://github.com/crewAIInc/crewAI/pull/7742"><img align="right" src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b><br>★ 60.6k · Fail an evaluation when an expected metric has no score instead of passing it</td>
+<td width="50%" valign="top"><a href="https://github.com/crewAIInc/crewAI/pull/7742"><img align="right" src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b><br>★ 60.7k · Fail an evaluation when an expected metric has no score instead of passing it</td>
 <td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39k · Reject the reserved trajectory output name in ReAct at construction time</td>
 </tr>
 <tr>
