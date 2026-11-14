@@ -68,7 +68,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/crewAIInc/crewAI/pull/7742"><img align="right" src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b><br>★ 60.9k · Fail an evaluation when an expected metric has no score instead of passing it</td>
-<td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39k · Reject the reserved trajectory output name in ReAct at construction time</td>
+<td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39.1k · Reject the reserved trajectory output name in ReAct at construction time</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/microsoft/onnxruntime/pull/32703"><img align="right" src="https://img.shields.io/badge/%2332703-open-238636?style=flat-square" alt="#32703 open"/></a><b><a href="https://github.com/microsoft/onnxruntime">ONNX Runtime</a></b><br>★ 22.3k · Reconnect the producer edge when DivMulFusion substitutes the Mul&#x27;s input</td>
