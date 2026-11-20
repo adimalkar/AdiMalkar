@@ -63,7 +63,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 <td width="50%" valign="top"><a href="https://github.com/NousResearch/hermes-agent/pull/132669"><img align="right" src="https://img.shields.io/badge/%23132669-open-238636?style=flat-square" alt="#132669 open"/></a><b><a href="https://github.com/NousResearch/hermes-agent">hermes-agent</a></b><br>★ 265k · Show saved working directories in CLI session lists</td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 121k · Accept X | None annotations on special action parameters</td>
+<td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 122k · Accept X | None annotations on special action parameters</td>
 <td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.2k · Use the original context length for the mRoPE YaRN correction range</td>
 </tr>
 <tr>
