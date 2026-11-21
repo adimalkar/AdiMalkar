@@ -40,7 +40,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**23 merged** and **24 open** pull requests across 19 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**23 merged** and **26 open** pull requests across 19 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
 
 <table>
 <tr>
@@ -48,7 +48,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Akornia%2Fkornia"><img align="right" src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia"><img align="right" src="https://img.shields.io/badge/10%20PRs-merged-8957e5?style=flat-square" alt="10 PRs merged"/></a><b><a href="https://github.com/kornia/kornia">kornia</a></b><br>★ 12.4k · Fixed PatchMix, RandomResizedCrop and rank errors; revived LoFTR CPU tests</td>
-<td width="50%" valign="top"><a href="https://github.com/microsoft/PyRIT/pull/4491"><img align="right" src="https://img.shields.io/badge/%234491-open-238636?style=flat-square" alt="#4491 open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/4%20PRs-merged-8957e5?style=flat-square" alt="4 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
+<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/3%20PRs-open-238636?style=flat-square" alt="3 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/4%20PRs-merged-8957e5?style=flat-square" alt="4 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Afivetran%2Fgreat_expectations"><img align="right" src="https://img.shields.io/badge/3%20PRs-merged-8957e5?style=flat-square" alt="3 PRs merged"/></a><b><a href="https://github.com/fivetran/great_expectations">Great Expectations</a></b><br>★ 11.9k · Serialized infinite Decimals instead of raising; type-checked 8 excluded test modules</td>
