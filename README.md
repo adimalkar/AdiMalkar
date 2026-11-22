@@ -64,7 +64,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 122k · Accept X | None annotations on special action parameters</td>
-<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.3k · Use the original context length for the mRoPE YaRN correction range</td>
+<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.4k · Use the original context length for the mRoPE YaRN correction range</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/docling-project/docling/pull/5465"><img align="right" src="https://img.shields.io/badge/%235465-open-238636?style=flat-square" alt="#5465 open"/></a><b><a href="https://github.com/docling-project/docling">docling</a></b><br>★ 70.9k · Read the HTML body of .msg files from the RTF body and add prefer_html</td>
