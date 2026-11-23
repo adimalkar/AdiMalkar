@@ -60,7 +60,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amlc-ai%2Fxgrammar"><img align="right" src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><a href="https://github.com/mlc-ai/xgrammar/pull/929"><img align="right" src="https://img.shields.io/badge/%23929-merged-8957e5?style=flat-square" alt="#929 merged"/></a><b><a href="https://github.com/mlc-ai/xgrammar">xgrammar</a></b><br>★ 2k · Resolved JSON Schema references through array indices for structured generation</td>
-<td width="50%" valign="top"><a href="https://github.com/NousResearch/hermes-agent/pull/132669"><img align="right" src="https://img.shields.io/badge/%23132669-open-238636?style=flat-square" alt="#132669 open"/></a><b><a href="https://github.com/NousResearch/hermes-agent">hermes-agent</a></b><br>★ 265k · Show saved working directories in CLI session lists</td>
+<td width="50%" valign="top"><a href="https://github.com/NousResearch/hermes-agent/pull/132669"><img align="right" src="https://img.shields.io/badge/%23132669-open-238636?style=flat-square" alt="#132669 open"/></a><b><a href="https://github.com/NousResearch/hermes-agent">hermes-agent</a></b><br>★ 266k · Show saved working directories in CLI session lists</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 122k · Accept X | None annotations on special action parameters</td>
@@ -72,7 +72,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39.2k · Reject the reserved trajectory output name in ReAct at construction time</td>
-<td width="50%" valign="top"><a href="https://github.com/ml-explore/mlx/pull/4907"><img align="right" src="https://img.shields.io/badge/%234907-open-238636?style=flat-square" alt="#4907 open"/></a><b><a href="https://github.com/ml-explore/mlx">mlx</a></b><br>★ 29.2k · Fix checkpoint backward scheduling for chunked recurrences</td>
+<td width="50%" valign="top"><a href="https://github.com/ml-explore/mlx/pull/4907"><img align="right" src="https://img.shields.io/badge/%234907-open-238636?style=flat-square" alt="#4907 open"/></a><b><a href="https://github.com/ml-explore/mlx">mlx</a></b><br>★ 29.3k · Fix checkpoint backward scheduling for chunked recurrences</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/google/adk-python/pull/8119"><img align="right" src="https://img.shields.io/badge/%238119-open-238636?style=flat-square" alt="#8119 open"/></a><b><a href="https://github.com/google/adk-python">adk-python</a></b><br>★ 22.3k · Do not re-persist fast-forwarded outputs on resume</td>
