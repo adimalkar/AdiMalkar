@@ -40,7 +40,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**26 merged** and **23 open** pull requests across 19 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**26 merged** and **24 open** pull requests across 20 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
 
 <table>
 <tr>
@@ -48,7 +48,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/kornia/kornia/pull/6865"><img align="right" src="https://img.shields.io/badge/%236865-open-238636?style=flat-square" alt="#6865 open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia"><img align="right" src="https://img.shields.io/badge/11%20PRs-merged-8957e5?style=flat-square" alt="11 PRs merged"/></a><b><a href="https://github.com/kornia/kornia">kornia</a></b><br>★ 12.4k · Fixed PatchMix, RandomResizedCrop and rank errors; revived LoFTR CPU tests</td>
-<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/5%20PRs-merged-8957e5?style=flat-square" alt="5 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
+<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/5%20PRs-merged-8957e5?style=flat-square" alt="5 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5.1k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Afivetran%2Fgreat_expectations"><img align="right" src="https://img.shields.io/badge/3%20PRs-merged-8957e5?style=flat-square" alt="3 PRs merged"/></a><b><a href="https://github.com/fivetran/great_expectations">Great Expectations</a></b><br>★ 11.9k · Serialized infinite Decimals instead of raising; type-checked 8 excluded test modules</td>
@@ -80,11 +80,14 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/cockpit-project/cockpit/pull/23917"><img align="right" src="https://img.shields.io/badge/%2323917-open-238636?style=flat-square" alt="#23917 open"/></a><b><a href="https://github.com/cockpit-project/cockpit">cockpit</a></b><br>★ 15.4k · Bridge: Close all subprocess pipes when closing the transport</td>
-<td width="50%" valign="top"><a href="https://github.com/Jguer/yay/pull/3020"><img align="right" src="https://img.shields.io/badge/%233020-open-238636?style=flat-square" alt="#3020 open"/></a><b><a href="https://github.com/Jguer/yay">yay</a></b><br>★ 13.8k · Pass --ignorearch only for bases the user accepted</td>
+<td width="50%" valign="top"><a href="https://github.com/Jguer/yay/pull/3020"><img align="right" src="https://img.shields.io/badge/%233020-open-238636?style=flat-square" alt="#3020 open"/></a><b><a href="https://github.com/Jguer/yay">yay</a></b><br>★ 13.9k · Pass --ignorearch only for bases the user accepted</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/cupy/cupy/pull/10469"><img align="right" src="https://img.shields.io/badge/%2310469-open-238636?style=flat-square" alt="#10469 open"/></a><b><a href="https://github.com/cupy/cupy">cupy</a></b><br>★ 12.4k · Keep the input precision in cupyx.scipy.signal.resample_poly with the default filter</td>
-<td width="50%" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_26_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
+<td width="50%" valign="top"><a href="https://github.com/NVIDIA/Model-Optimizer/pull/3557"><img align="right" src="https://img.shields.io/badge/%233557-open-238636?style=flat-square" alt="#3557 open"/></a><b><a href="https://github.com/NVIDIA/Model-Optimizer">Model-Optimizer</a></b><br>★ 5.7k · Reject tvd_ce weights that zero or blow up the loss</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_26_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
 </tr>
 </table>
 <!-- END_SECTION:contributions -->
