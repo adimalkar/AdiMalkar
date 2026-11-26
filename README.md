@@ -68,7 +68,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.6k · Use the original context length for the mRoPE YaRN correction range</td>
-<td width="50%" valign="top"><a href="https://github.com/docling-project/docling/pull/5465"><img align="right" src="https://img.shields.io/badge/%235465-open-238636?style=flat-square" alt="#5465 open"/></a><b><a href="https://github.com/docling-project/docling">docling</a></b><br>★ 71k · Read the HTML body of .msg files from the RTF body and add prefer_html</td>
+<td width="50%" valign="top"><a href="https://github.com/docling-project/docling/pull/5465"><img align="right" src="https://img.shields.io/badge/%235465-open-238636?style=flat-square" alt="#5465 open"/></a><b><a href="https://github.com/docling-project/docling">docling</a></b><br>★ 71.1k · Read the HTML body of .msg files from the RTF body and add prefer_html</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/crewAIInc/crewAI/pull/7742"><img align="right" src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b><br>★ 61.3k · Fail an evaluation when an expected metric has no score instead of passing it</td>
