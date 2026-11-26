@@ -40,7 +40,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**28 merged** and **24 open** pull requests across 20 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**29 merged** and **24 open** pull requests across 20 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
 
 <table>
 <tr>
@@ -48,7 +48,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia"><img align="right" src="https://img.shields.io/badge/12%20PRs-merged-8957e5?style=flat-square" alt="12 PRs merged"/></a><b><a href="https://github.com/kornia/kornia">kornia</a></b><br>★ 12.4k · Fixed PatchMix, RandomResizedCrop and rank errors; revived LoFTR CPU tests</td>
-<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/3%20PRs-open-238636?style=flat-square" alt="3 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/6%20PRs-merged-8957e5?style=flat-square" alt="6 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5.1k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
+<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/3%20PRs-open-238636?style=flat-square" alt="3 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/7%20PRs-merged-8957e5?style=flat-square" alt="7 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5.1k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Afivetran%2Fgreat_expectations"><img align="right" src="https://img.shields.io/badge/3%20PRs-merged-8957e5?style=flat-square" alt="3 PRs merged"/></a><b><a href="https://github.com/fivetran/great_expectations">Great Expectations</a></b><br>★ 11.9k · Serialized infinite Decimals instead of raising; type-checked 8 excluded test modules</td>
@@ -87,7 +87,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 <td width="50%" valign="top"><a href="https://github.com/NVIDIA/Model-Optimizer/pull/3557"><img align="right" src="https://img.shields.io/badge/%233557-open-238636?style=flat-square" alt="#3557 open"/></a><b><a href="https://github.com/NVIDIA/Model-Optimizer">Model-Optimizer</a></b><br>★ 5.7k · Reject tvd_ce weights that zero or blow up the loss</td>
 </tr>
 <tr>
-<td colspan="2" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_28_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
+<td colspan="2" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_29_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
 </tr>
 </table>
 <!-- END_SECTION:contributions -->
