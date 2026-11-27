@@ -40,7 +40,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 ## Open Source Contributions
 
 <!-- START_SECTION:contributions -->
-**29 merged** and **24 open** pull requests across 20 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
+**30 merged** and **23 open** pull requests across 20 projects in 19 organizations — fixes and features in ML infrastructure, compilers, agent frameworks, and evaluation tooling.
 
 <table>
 <tr>
@@ -48,7 +48,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Akornia%2Fkornia"><img align="right" src="https://img.shields.io/badge/12%20PRs-merged-8957e5?style=flat-square" alt="12 PRs merged"/></a><b><a href="https://github.com/kornia/kornia">kornia</a></b><br>★ 12.4k · Fixed PatchMix, RandomResizedCrop and rank errors; revived LoFTR CPU tests</td>
-<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/3%20PRs-open-238636?style=flat-square" alt="3 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/7%20PRs-merged-8957e5?style=flat-square" alt="7 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5.1k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
+<td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Aopen+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/2%20PRs-open-238636?style=flat-square" alt="2 PRs open"/></a><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Amicrosoft%2FPyRIT"><img align="right" src="https://img.shields.io/badge/8%20PRs-merged-8957e5?style=flat-square" alt="8 PRs merged"/></a><b><a href="https://github.com/microsoft/PyRIT">PyRIT</a></b><br>★ 5.1k · Let the PUZZLED keyword masker select words with non-ASCII letters</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged+repo%3Afivetran%2Fgreat_expectations"><img align="right" src="https://img.shields.io/badge/3%20PRs-merged-8957e5?style=flat-square" alt="3 PRs merged"/></a><b><a href="https://github.com/fivetran/great_expectations">Great Expectations</a></b><br>★ 11.9k · Serialized infinite Decimals instead of raising; type-checked 8 excluded test modules</td>
@@ -67,12 +67,12 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 <td width="50%" valign="top"><a href="https://github.com/browser-use/browser-use/pull/6023"><img align="right" src="https://img.shields.io/badge/%236023-open-238636?style=flat-square" alt="#6023 open"/></a><b><a href="https://github.com/browser-use/browser-use">browser-use</a></b><br>★ 122k · Accept X | None annotations on special action parameters</td>
 </tr>
 <tr>
-<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.6k · Use the original context length for the mRoPE YaRN correction range</td>
+<td width="50%" valign="top"><a href="https://github.com/vllm-project/vllm/pull/58879"><img align="right" src="https://img.shields.io/badge/%2358879-open-238636?style=flat-square" alt="#58879 open"/></a><b><a href="https://github.com/vllm-project/vllm">vLLM</a></b><br>★ 97.7k · Use the original context length for the mRoPE YaRN correction range</td>
 <td width="50%" valign="top"><a href="https://github.com/docling-project/docling/pull/5465"><img align="right" src="https://img.shields.io/badge/%235465-open-238636?style=flat-square" alt="#5465 open"/></a><b><a href="https://github.com/docling-project/docling">docling</a></b><br>★ 71.1k · Read the HTML body of .msg files from the RTF body and add prefer_html</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/crewAIInc/crewAI/pull/7742"><img align="right" src="https://img.shields.io/badge/%237742-open-238636?style=flat-square" alt="#7742 open"/></a><b><a href="https://github.com/crewAIInc/crewAI">CrewAI</a></b><br>★ 61.3k · Fail an evaluation when an expected metric has no score instead of passing it</td>
-<td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39.2k · Reject the reserved trajectory output name in ReAct at construction time</td>
+<td width="50%" valign="top"><a href="https://github.com/stanfordnlp/dspy/pull/10275"><img align="right" src="https://img.shields.io/badge/%2310275-open-238636?style=flat-square" alt="#10275 open"/></a><b><a href="https://github.com/stanfordnlp/dspy">DSPy</a></b><br>★ 39.3k · Reject the reserved trajectory output name in ReAct at construction time</td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://github.com/google/adk-python/pull/8119"><img align="right" src="https://img.shields.io/badge/%238119-open-238636?style=flat-square" alt="#8119 open"/></a><b><a href="https://github.com/google/adk-python">adk-python</a></b><br>★ 22.4k · Do not re-persist fast-forwarded outputs on resume</td>
@@ -87,7 +87,7 @@ Outside of the typical ML stack, I spend time thinking about **AI safety and ali
 <td width="50%" valign="top"><a href="https://github.com/NVIDIA/Model-Optimizer/pull/3557"><img align="right" src="https://img.shields.io/badge/%233557-open-238636?style=flat-square" alt="#3557 open"/></a><b><a href="https://github.com/NVIDIA/Model-Optimizer">Model-Optimizer</a></b><br>★ 5.7k · Reject tvd_ce weights that zero or blow up the loss</td>
 </tr>
 <tr>
-<td colspan="2" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_29_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
+<td colspan="2" align="center"><a href="https://github.com/pulls?q=is%3Apr+author%3Aadimalkar+-user%3Aadimalkar+-user%3Ahiringfleet+is%3Amerged"><img src="https://img.shields.io/badge/GitHub-All_30_merged_open_source_PRs-238636?style=for-the-badge&logo=github&logoColor=white" alt="All merged open source PRs" /></a></td>
 </tr>
 </table>
 <!-- END_SECTION:contributions -->
